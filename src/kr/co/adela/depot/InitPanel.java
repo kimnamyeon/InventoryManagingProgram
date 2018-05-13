@@ -27,21 +27,21 @@ public class InitPanel extends JPanel {
 
 		DAOclothes daoc = new DAOclothes();
 
-		// ¹°Ç° ³Ñ¹ö¸µ
+		// ë¬¼í’ˆ ë„˜ë²„ë§
 		daoc.realignment();
 
-		// vector data,title¿¡ db ÄÃ·³ ³Ö±â
+		// vector data,titleì— db ì»¬ëŸ¼ ë„£ê¸°
 		data = new Vector();
 		data = daoc.showAllData();
 		titles = new Vector();
 		titles.add("No");
-		titles.add("»óÇ°¸í");
-		titles.add("»óÇ°¼³¸í");
-		titles.add("°¡°İ");
-		titles.add("¼ö·®");
-		titles.add("À§Ä¡");
-		titles.add("³¯Â¥");
-		titles.add("Ä«Å×°í¸®");
+		titles.add("ìƒí’ˆëª…");
+		titles.add("ìƒí’ˆì„¤ëª…");
+		titles.add("ê°€ê²©");
+		titles.add("ìˆ˜ëŸ‰");
+		titles.add("ìœ„ì¹˜");
+		titles.add("ë‚ ì§œ");
+		titles.add("ì¹´í…Œê³ ë¦¬");
 		model = new DefaultTableModel(data, titles) {
 			public boolean isCellEditable(int row, int column) {
 				return false;
@@ -66,21 +66,21 @@ public class InitPanel extends JPanel {
 	public void showAll() {
 		DAOclothes daoc = new DAOclothes();
 
-		// ¹°Ç° ³Ñ¹ö¸µ
+		// ë¬¼í’ˆ ë„˜ë²„ë§
 		daoc.realignment();
 
-		// vector data,title¿¡ db ÄÃ·³ ³Ö±â
+		// vector data,titleì— db ì»¬ëŸ¼ ë„£ê¸°
 		data = new Vector();
 		data = daoc.showAllData();
 		titles = new Vector();
 		titles.add("No");
-		titles.add("»óÇ°¸í");
-		titles.add("»óÇ°¼³¸í");
-		titles.add("°¡°İ");
-		titles.add("¼ö·®");
-		titles.add("À§Ä¡");
-		titles.add("³¯Â¥");
-		titles.add("Ä«Å×°í¸®");
+		titles.add("ìƒí’ˆëª…");
+		titles.add("ìƒí’ˆì„¤ëª…");
+		titles.add("ê°€ê²©");
+		titles.add("ìˆ˜ëŸ‰");
+		titles.add("ìœ„ì¹˜");
+		titles.add("ë‚ ì§œ");
+		titles.add("ì¹´í…Œê³ ë¦¬");
 		model = new DefaultTableModel(data, titles);
 		tblInit.setModel(model);
 	}

@@ -13,7 +13,7 @@ public class DAOclothes {
 		Connection conn = getConn();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "select * from goods where fk_category_name = 'ÀÇ·ù'";
+		String sql = "select * from goods where fk_category_name = 'ì˜ë¥˜'";
 		Vector data = new Vector();
 		
 		try {
@@ -120,10 +120,10 @@ public class DAOclothes {
 			
 			result = ps.executeUpdate();
 			if(result ==1) {
-				System.out.println("ÀúÀå ¼º°ø!");
+				System.out.println("ì €ì¥ ì„±ê³µ!");
 				ok = true;
 			}else {
-				System.out.println("ÀúÀå ½ÇÆĞ");
+				System.out.println("ì €ì¥ ì‹¤íŒ¨");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -132,7 +132,7 @@ public class DAOclothes {
 		}
 		return ok;
 	}
-	//history Å×ÀÌºí¿¡ insert
+	//history í…Œì´ë¸”ì— insert
 	public void insertHistory(DTOclothes dtoc) {
 		Connection conn = getConn();
 		PreparedStatement ps = null;
@@ -197,10 +197,10 @@ public class DAOclothes {
 			ps.setInt(7, dtoc.getNumber());
 			result = ps.executeUpdate();
 			if(result == 1) {
-				System.out.println("¼öÁ¤ ¼º°ø");
+				System.out.println("ìˆ˜ì • ì„±ê³µ");
 				ok = true;
 			}else {
-				System.out.println("¼öÁ¤ ½ÇÆĞ ¤Ğ¤Ğ");
+				System.out.println("ìˆ˜ì • ì‹¤íŒ¨ ã… ã… ");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -223,9 +223,9 @@ public class DAOclothes {
 			result = ps.executeUpdate();
 			if(result == 1) {
 				ok = true;
-				System.out.println("»èÁ¦Äõ¸® ¹ßµ¿!");
+				System.out.println("ì‚­ì œì¿¼ë¦¬ ë°œë™!");
 			}else {
-				System.out.println("»èÁ¦Äõ¸® ½ÇÆĞ");
+				System.out.println("ì‚­ì œì¿¼ë¦¬ ì‹¤íŒ¨");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -304,7 +304,7 @@ public class DAOclothes {
 
 	
 	private void release(Connection conn, PreparedStatement ps, ResultSet rs) {
-		if(rs != null) { //select ÀÇ °æ¿ì¿¡¸¸ rs°¡ ÇÊ¿äÇÔ.
+		if(rs != null) { //select ì˜ ê²½ìš°ì—ë§Œ rsê°€ í•„ìš”í•¨.
 			try {
 				rs.close();
 			} catch (SQLException e) {

@@ -63,22 +63,22 @@ public class LoginPanel extends JPanel implements ActionListener {
 		add(pSignin);
 		pSignin.setLayout(null);
 		
-		//ID ÅØ½ºÆ®ÇÊµå
+		//ID í…ìŠ¤íŠ¸í•„ë“œ
 		tfId = new JTextField() {
 			public void setBorder(Border border) {}
 		};
 		tfId.setOpaque(false);
-		tfId.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 25));
+		tfId.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 25));
 		tfId.setBounds(146, 272, 249, 37);
 		pSignin.add(tfId);
 		tfId.setColumns(10);
 
-		//PWD ÅØ½ºÆ®ÇÊµå
+		//PWD í…ìŠ¤íŠ¸í•„ë“œ
 		pfPwd = new JPasswordField() {
 			public void setBorder(Border border) {}
 		};
 		pfPwd.setOpaque(false);
-		pfPwd.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 25));
+		pfPwd.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 25));
 		pfPwd.setColumns(10);
 		pfPwd.setBounds(146, 351, 249, 37);
 		pSignin.add(pfPwd);
@@ -112,7 +112,7 @@ public class LoginPanel extends JPanel implements ActionListener {
 		
 		lblTitle = new JLabel("Welcome to Adela");
 		lblTitle.setForeground(Color.WHITE);
-		lblTitle.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		lblTitle.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		lblTitle.setBounds(105, 151, 290, 100);
 		pSignin.add(lblTitle);
 
@@ -149,7 +149,7 @@ public class LoginPanel extends JPanel implements ActionListener {
 		
 		
 
-	}//»ı¼ºÀÚ ³¡
+	}//ìƒì„±ì ë
 //	@Override
 //	public void paint(Graphics g) {
 //		super.paint(g);
@@ -180,7 +180,7 @@ public class LoginPanel extends JPanel implements ActionListener {
 			String pwd = pfPwd.getText();
 			
 			if(id.length() == 0) {
-				JOptionPane.showMessageDialog(this, "¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				JOptionPane.showMessageDialog(this, "ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				return;
 			}
 			
@@ -193,17 +193,17 @@ public class LoginPanel extends JPanel implements ActionListener {
 			if( ok ) {
 				mf.remove(this);
 				mf.getContentPane().setLayout(null);
-				// ¸Ş´º ÆĞ³Î
+				// ë©”ë‰´ íŒ¨ë„
 				DepotMainFrame.pMenu.setBounds(0, 0, 200, 682);
 				DepotMainFrame.pMenu.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 4, Color.decode("#7030A0")));
 				mf.getContentPane().add(DepotMainFrame.pMenu);
 				DepotMainFrame.pMenu.setManagerName();
 				
-				// °Ë»ö ÆĞ³Î
+				// ê²€ìƒ‰ íŒ¨ë„
 				DepotMainFrame.pSearch.setBounds(200, 0, 1064, 50);
 				mf.getContentPane().add(DepotMainFrame.pSearch);
 				
-				// ÄÁÅÙÃ÷ ÆĞ³Î
+				// ì»¨í…ì¸  íŒ¨ë„
 				DepotMainFrame.pInit.setBounds(200, 50, 1064, 632);
 				mf.getContentPane().add(DepotMainFrame.pInit);
 				mf.invalidate();
@@ -212,7 +212,7 @@ public class LoginPanel extends JPanel implements ActionListener {
 				
 				
 			} else {
-				JOptionPane.showMessageDialog(this, "È¸¿ø Á¤º¸°¡ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù.");
+				JOptionPane.showMessageDialog(this, "íšŒì› ì •ë³´ê°€ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 			
 		}

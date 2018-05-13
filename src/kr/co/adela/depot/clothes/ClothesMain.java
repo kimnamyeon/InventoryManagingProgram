@@ -54,25 +54,25 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 		this.mF = mF;
 		setLayout(new BorderLayout());
 		setBackground(Color.BLACK);
-		//east¿¡ ¿©¹é ³Ö±â
+		//eastì— ì—¬ë°± ë„£ê¸°
 		pEast = new JPanel();
 		pEast.setBackground(Color.decode("#BDBDBD"));
 		//pEast.setOpaque(false);
 		add(pEast,BorderLayout.EAST);
-		//Å×ÀÌºí ÆĞ³Î
+		//í…Œì´ë¸” íŒ¨ë„
 		pList = new JPanel();
 		add(pList,BorderLayout.CENTER);
 		pList.setOpaque(false);
 		pList.setLayout(new BorderLayout());
 
-		//Å×ÀÌºí ÆĞ³Î - jtable ºÙÀÌ±â
+		//í…Œì´ë¸” íŒ¨ë„ - jtable ë¶™ì´ê¸°
 		showData();
 		titles = new Vector();
-		titles.add("No"); titles.add("»óÇ°¸í");
-		titles.add("»óÇ°¼³¸í"); titles.add("°¡°İ");
-		titles.add("¼ö·®"); titles.add("À§Ä¡");
-		titles.add("³¯Â¥"); titles.add("Ä«Å×°í¸®");
-		//model »ı¼º
+		titles.add("No"); titles.add("ìƒí’ˆëª…");
+		titles.add("ìƒí’ˆì„¤ëª…"); titles.add("ê°€ê²©");
+		titles.add("ìˆ˜ëŸ‰"); titles.add("ìœ„ì¹˜");
+		titles.add("ë‚ ì§œ"); titles.add("ì¹´í…Œê³ ë¦¬");
+		//model ìƒì„±
 		model = new DefaultTableModel(data, titles) {
 			@Override
 			public boolean isCellEditable(int row, int column) {
@@ -88,7 +88,7 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 			public void setBorder(Border border) {}
 		};
 		scrollPane.setPreferredSize(new Dimension(1000, 590));
-		//Å×ÀÌºí Åõ¸í
+		//í…Œì´ë¸” íˆ¬ëª…
 		scrollPane.setOpaque(false);
 		scrollPane.getViewport().setOpaque(false);
 		pCenter = new JPanel();
@@ -96,7 +96,7 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 		pCenter.setOpaque(false);
 		pCenter.add(scrollPane);
 		pList.add(pCenter);
-		//Å×ÀÌºí ÆĞ³Î - ¹öÆ° ºÙÀÌ±â(Ãß°¡, ¼öÁ¤, »èÁ¦)
+		//í…Œì´ë¸” íŒ¨ë„ - ë²„íŠ¼ ë¶™ì´ê¸°(ì¶”ê°€, ìˆ˜ì •, ì‚­ì œ)
 		pListSouth = new JPanel();
 		pListSouth.setBackground(Color.decode("#BDBDBD"));
 		pListSouth.setLayout(new FlowLayout(FlowLayout.RIGHT));
@@ -146,13 +146,13 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 //		setOpaque(false);
 //		super.paintComponent(g);
 //	}
-	//Å×ÀÌºí ÀüÃ¼ µ¥ÀÌÅÍ Ãâ·Â
+	//í…Œì´ë¸” ì „ì²´ ë°ì´í„° ì¶œë ¥
 	public void showData() {
 		DAOclothes daoc = new DAOclothes();
 		data = daoc.showClothesData();
 	}
 	
-	//Å×ÀÌºí ¾÷µ¥ÀÌÆ®
+	//í…Œì´ë¸” ì—…ë°ì´íŠ¸
 	public void updateTable() {
 		showData();
 		model = new DefaultTableModel(data, titles);
@@ -163,10 +163,10 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btnInsert) {
-			dD = new DataDialog(this,"»óÇ° Ãß°¡!", true);
-			System.out.println("Ãß°¡¹öÆ°");
+			dD = new DataDialog(this,"ìƒí’ˆ ì¶”ê°€!", true);
+			System.out.println("ì¶”ê°€ë²„íŠ¼");
 		}else if (e.getSource() == btnUpdate) {
-			System.out.println("¼öÁ¤¹öÆ°");
+			System.out.println("ìˆ˜ì •ë²„íŠ¼");
 			int upNumber = (int)selectData.get(0);
 			String upName = (String) selectData.get(1);
 			String upDetail = (String) selectData.get(2);
@@ -182,12 +182,12 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 			dtoc.setAmount(upAmount);
 			dtoc.setLocation(upLocation);
 			dtoc.setCategory(upCategory);	
-			uD = new UpdataDialog(this,"»óÇ° ¼öÁ¤!",true,dtoc);
+			uD = new UpdataDialog(this,"ìƒí’ˆ ìˆ˜ì •!",true,dtoc);
 		}else if(e.getSource() == btnDelete) {
 			int result = JOptionPane.showConfirmDialog
-			(this, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦", JOptionPane.OK_CANCEL_OPTION);
+			(this, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ", JOptionPane.OK_CANCEL_OPTION);
 			if(result == JOptionPane.YES_OPTION) {
-				System.out.println("È®ÀÎ");
+				System.out.println("í™•ì¸");
 				System.out.println("@@@selectData = " + selectData);
 				int deleteNum = (int) selectData.get(0);
 				System.out.println("@@@deleteNum = " + deleteNum);
@@ -199,7 +199,7 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 					daoc.realignment();
 					updateTable();
 				}
-				String history = "»óÇ° »èÁ¦";
+				String history = "ìƒí’ˆ ì‚­ì œ";
 				dtoc.setHistoryDetail(history);
 				String delName = (String) selectData.get(1);
 				int delAmount = (int) selectData.get(4);
@@ -209,7 +209,7 @@ public class ClothesMain extends JPanel implements ActionListener,MouseListener{
 				dtoc.setManagerName(DepotMainFrame.managerName);
 				daoc.deleteHistory(dtoc);
 			}else{
-				System.out.println("Ãë¼Ò");
+				System.out.println("ì·¨ì†Œ");
 			}
 		}
 		

@@ -46,7 +46,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		setLayout(null);
 		setBackground(Color.decode("#BDBDBD"));
 		
-		// ·Î°í ³Ö±â
+		// ë¡œê³  ë„£ê¸°
 		iLogo = new ImageIcon("res/logo.PNG");
 		btnLogo = new JButton(iLogo);
 		btnLogo.setSize(160, 120);
@@ -56,43 +56,43 @@ public class DepotMenu extends JPanel implements ActionListener {
 		btnLogo.setLocation(18, 10);
 		add(btnLogo);
 		
-		//ÀüÃ¼»óÇ° ÀÌ¹ÌÁö
+		//ì „ì²´ìƒí’ˆ ì´ë¯¸ì§€
 		ImageIcon imgAll = new ImageIcon(all);
 		ImageIcon imgAllclick = new ImageIcon(allClick);
 		ImageIcon imgAllMouse = new ImageIcon(allMouse);
-		//ÀÇ·ù ÀÌ¹ÌÁö
+		//ì˜ë¥˜ ì´ë¯¸ì§€
 		ImageIcon imgClothe = new ImageIcon(clotheMenu);
 		ImageIcon imgClotheClick = new ImageIcon(clotheClick);
 		ImageIcon imgClotheMouse = new ImageIcon(clotheMouse);
-		//½Å¹ß ÀÌ¹ÌÁö
+		//ì‹ ë°œ ì´ë¯¸ì§€
 		ImageIcon imgShoes = new ImageIcon(shoes);
 		ImageIcon imgShoesMouse = new ImageIcon(shoesMouse);
 		ImageIcon imgShoesClick = new ImageIcon(shoesClick);
-		//°¡¹æ ÀÌ¹ÌÁö
+		//ê°€ë°© ì´ë¯¸ì§€
 		ImageIcon imgBag = new ImageIcon(bag);
 		ImageIcon imgBagMouse = new ImageIcon(bagMouse);
 		ImageIcon imgBagClick = new ImageIcon(bagClick);
-		//¾Ç¼¼¼­¸® ÀÌ¹ÌÁö
+		//ì•…ì„¸ì„œë¦¬ ì´ë¯¸ì§€
 		ImageIcon imgAcc = new ImageIcon(acc);
 		ImageIcon imgAccMouse = new ImageIcon(accMouse);
 		ImageIcon imgAccClick = new ImageIcon(accClick);
-		//ÀÌ·ÂÁ¶È¸ ÀÌ¹ÌÁö
+		//ì´ë ¥ì¡°íšŒ ì´ë¯¸ì§€
 		ImageIcon imgHistory = new ImageIcon(history);
 		ImageIcon imgHistoryMouse = new ImageIcon(historyMouse);
 		ImageIcon imgHistoryClick = new ImageIcon(historyClick);
-		//°ü¸®ÀÚ ¸ñ·Ï ÀÌ¹ÌÁö
+		//ê´€ë¦¬ì ëª©ë¡ ì´ë¯¸ì§€
 		ImageIcon imgList = new ImageIcon(list);
 		ImageIcon imgListMouse = new ImageIcon(listMouse);
 		ImageIcon imgListClick = new ImageIcon(listClick);
-		//·Î±×¾Æ¿ô ÀÌ¹ÌÁö
+		//ë¡œê·¸ì•„ì›ƒ ì´ë¯¸ì§€
 		ImageIcon imgLogout = new ImageIcon(logout);
 		ImageIcon imgLogoutMouse = new ImageIcon(logoutMouse);
 		ImageIcon imgLogoutClick = new ImageIcon(logoutClick);
-		// ¹öÆ° Ãâ·Â
-		// È¸¿ø Á¤º¸ ±¸¿ª
+		// ë²„íŠ¼ ì¶œë ¥
+		// íšŒì› ì •ë³´ êµ¬ì—­
 		lblName = new JLabel();
 		lblName.setBounds(25, 150, 55, 15);
-		lblWelcome = new JLabel("´Ô È¯¿µÇÕ´Ï´Ù");
+		lblWelcome = new JLabel("ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤");
 		lblWelcome.setBounds(85, 150, 90, 15);
 		btnLogout = new JButton(imgLogout);
 		btnLogout.setBorderPainted(false);
@@ -105,7 +105,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		add(lblWelcome);
 		add(btnLogout);
 		btnLogout.addActionListener(this);
-		// ÀüÃ¼ »óÇ° ¹öÆ°
+		// ì „ì²´ ìƒí’ˆ ë²„íŠ¼
 		btnAll = new JButton(imgAll);
 		btnAll.setBounds(12, 213, 170, 60);
 		btnAll.setBorderPainted(false);
@@ -113,7 +113,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		btnAll.setContentAreaFilled(false);
 		btnAll.setRolloverIcon(imgAllMouse);
 		btnAll.setPressedIcon(imgAllclick);
-		// ÀÇ·ù ¹öÆ°
+		// ì˜ë¥˜ ë²„íŠ¼
 		btnClothes = new JButton(imgClothe);
 		btnClothes.setBorderPainted(false);
 		btnClothes.setFocusPainted(false);
@@ -121,7 +121,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		btnClothes.setPressedIcon(imgClotheClick);
 		btnClothes.setRolloverIcon(imgClotheMouse);
 		btnClothes.setBounds(12, 283, 170, 60);
-		//½Å¹ß
+		//ì‹ ë°œ
 		btnShoes = new JButton(imgShoes);
 		btnShoes.setBorderPainted(false);
 		btnShoes.setFocusPainted(false);
@@ -129,7 +129,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		btnShoes.setPressedIcon(imgShoesClick);
 		btnShoes.setRolloverIcon(imgShoesMouse);
 		btnShoes.setBounds(12, 341, 170, 60);
-		//°¡¹æ
+		//ê°€ë°©
 		btnBag = new JButton(imgBag);
 		btnBag.setBorderPainted(false);
 		btnBag.setFocusPainted(false);
@@ -137,7 +137,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		btnBag.setPressedIcon(imgBagClick);
 		btnBag.setRolloverIcon(imgBagMouse);
 		btnBag.setBounds(12, 398, 170, 60);
-		//¾Ç¼¼»ç¸®
+		//ì•…ì„¸ì‚¬ë¦¬
 		btnAcc = new JButton(imgAcc);
 		btnAcc.setBorderPainted(false);
 		btnAcc.setFocusPainted(false);
@@ -145,7 +145,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		btnAcc.setPressedIcon(imgAccClick);
 		btnAcc.setRolloverIcon(imgAccMouse);
 		btnAcc.setBounds(12, 455, 170, 60);
-		//ÀÌ·ÂÁ¶È¸
+		//ì´ë ¥ì¡°íšŒ
 		btnHistory = new JButton(imgHistory);
 		btnHistory.setBorderPainted(false);
 		btnHistory.setFocusPainted(false);
@@ -153,7 +153,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 		btnHistory.setPressedIcon(imgHistoryClick);
 		btnHistory.setRolloverIcon(imgHistoryMouse);
 		btnHistory.setBounds(12, 525, 170, 60);
-		//°ü¸®ÀÚ¸ñ·Ï
+		//ê´€ë¦¬ìëª©ë¡
 		btnManagerList = new JButton(imgList);
 		btnManagerList.setBorderPainted(false);
 		btnManagerList.setFocusPainted(false);
@@ -179,14 +179,14 @@ public class DepotMenu extends JPanel implements ActionListener {
 	}
 	
 	public void setManagerName() {
-		// È¸¿ø ÀÌ¸§ ¼³Á¤
+		// íšŒì› ì´ë¦„ ì„¤ì •
 		lblName.setText(DepotMainFrame.managerName);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btnLogout) {
-			int isDelete = JOptionPane.showConfirmDialog(this, "·Î±×¾Æ¿ô ÇÏ½Ã°Ú½À´Ï±î?", "·Î±×¾Æ¿ô", JOptionPane.YES_NO_OPTION);
+			int isDelete = JOptionPane.showConfirmDialog(this, "ë¡œê·¸ì•„ì›ƒ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ë¡œê·¸ì•„ì›ƒ", JOptionPane.YES_NO_OPTION);
 
 			if (isDelete == 0) {
 				fMain.remove(DepotMainFrame.pMenu);
@@ -232,7 +232,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 			fMain.remove(DepotMainFrame.pAcc);
 			fMain.remove(DepotMainFrame.pHistory);
 			fMain.remove(DepotMainFrame.pManager);
-			DepotMainFrame.searchCategory = "ÀÇ·ù";
+			DepotMainFrame.searchCategory = "ì˜ë¥˜";
 			DepotMainFrame.pSearch.setVisible(true);
 			DepotMainFrame.pClothes.setBounds(200, 50, 1064, 632);
 			fMain.getContentPane().add(DepotMainFrame.pClothes);
@@ -249,7 +249,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 			fMain.remove(DepotMainFrame.pAcc);
 			fMain.remove(DepotMainFrame.pHistory);
 			fMain.remove(DepotMainFrame.pManager);
-			DepotMainFrame.searchCategory = "½Å¹ß";
+			DepotMainFrame.searchCategory = "ì‹ ë°œ";
 			DepotMainFrame.pSearch.setVisible(true);
 			DepotMainFrame.pShoes.setBounds(200, 50, 1064, 632);
 			fMain.getContentPane().add(DepotMainFrame.pShoes);
@@ -266,7 +266,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 			fMain.remove(DepotMainFrame.pAcc);
 			fMain.remove(DepotMainFrame.pHistory);
 			fMain.remove(DepotMainFrame.pManager);
-			DepotMainFrame.searchCategory = "°¡¹æ";
+			DepotMainFrame.searchCategory = "ê°€ë°©";
 			DepotMainFrame.pSearch.setVisible(true);
 			DepotMainFrame.pBag.setBounds(200,50,1064,632);
 			fMain.getContentPane().add(DepotMainFrame.pBag);
@@ -283,7 +283,7 @@ public class DepotMenu extends JPanel implements ActionListener {
 			fMain.remove(DepotMainFrame.pBagInsert);
 			fMain.remove(DepotMainFrame.pHistory);
 			fMain.remove(DepotMainFrame.pManager);
-			DepotMainFrame.searchCategory = "¾Ç¼¼»ç¸®";
+			DepotMainFrame.searchCategory = "ì•…ì„¸ì‚¬ë¦¬";
 			DepotMainFrame.pSearch.setVisible(true);
 			DepotMainFrame.pAcc.setBounds(200,50,1064,632);
 			fMain.getContentPane().add(DepotMainFrame.pAcc);

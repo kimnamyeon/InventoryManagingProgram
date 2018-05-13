@@ -41,22 +41,22 @@ public class DepotShoesInsertUpdate extends JPanel implements ActionListener {
 		this.fMain = fMain;
 		setLayout(new BorderLayout());
 		
-		// È¸¿ø Á¤º¸ °¡Á®¿À±â
+		// íšŒì› ì •ë³´ ê°€ì ¸ì˜¤ê¸°
 		managerId = DepotMainFrame.managerId;
 		managerName = DepotMainFrame.managerName;
 		
 		this.isInsert = isInsert;
 
 		if(isInsert) {
-			lblTitle = new JLabel("»óÇ° Ãß°¡");
+			lblTitle = new JLabel("ìƒí’ˆ ì¶”ê°€");
 		} else {
-			lblTitle = new JLabel("»óÇ° ¼öÁ¤");
+			lblTitle = new JLabel("ìƒí’ˆ ìˆ˜ì •");
 			if(dto != null) {
 				this.goodsNumber = dto.getGoodsNumber();				
 			}
 		}
 		
-		lblTitle.setFont(new Font("±¼¸²", Font.BOLD, 25));
+		lblTitle.setFont(new Font("êµ´ë¦¼", Font.BOLD, 25));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		pEmpty = new JPanel();
 		pEmpty.setBackground(Color.decode("#BDBDBD"));
@@ -81,19 +81,19 @@ public class DepotShoesInsertUpdate extends JPanel implements ActionListener {
 		pSouth.setBackground(Color.decode("#BDBDBD"));
 		pCenter.setLayout(new GridLayout(16, 1));
 		
-		JLabel lblName = new JLabel("»óÇ°¸í ");
-		JLabel lblDetail = new JLabel("»óÇ°¼³¸í ");
-		JLabel lblPrice = new JLabel("°¡°İ ");
-		JLabel lblAmount = new JLabel("¼ö·® ");
-		JLabel lblLocation = new JLabel("»óÇ°À§Ä¡ ");
-		JLabel lblCategory = new JLabel("Ä«Å×°í¸® ");
+		JLabel lblName = new JLabel("ìƒí’ˆëª… ");
+		JLabel lblDetail = new JLabel("ìƒí’ˆì„¤ëª… ");
+		JLabel lblPrice = new JLabel("ê°€ê²© ");
+		JLabel lblAmount = new JLabel("ìˆ˜ëŸ‰ ");
+		JLabel lblLocation = new JLabel("ìƒí’ˆìœ„ì¹˜ ");
+		JLabel lblCategory = new JLabel("ì¹´í…Œê³ ë¦¬ ");
 		
 		tfName = new JTextField(20);
 		tfDetail = new JTextField(20);
 		tfPrice = new JTextField(20);
 		tfAmount = new JTextField(20);
 		tfLocation = new JTextField(20);
-		String[] cbString = {"ÀÇ·ù", "½Å¹ß", "°¡¹æ", "¾Ç¼¼»ç¸®"};
+		String[] cbString = {"ì˜ë¥˜", "ì‹ ë°œ", "ê°€ë°©", "ì•…ì„¸ì‚¬ë¦¬"};
 		cbCategory = new JComboBox<>(cbString);
 		cbCategory.setSelectedIndex(1);
 		
@@ -158,7 +158,7 @@ public class DepotShoesInsertUpdate extends JPanel implements ActionListener {
 		String location = tfLocation.getText();
 		String category = (String)cbCategory.getSelectedItem();
 		
-		// DTO¿¡ ´ã´Â´Ù
+		// DTOì— ë‹´ëŠ”ë‹¤
 		DepotGoodsDTO dto = new DepotGoodsDTO();
 		dto.setGoodsName(name);
 		dto.setGoodsDetail(detail);
@@ -167,12 +167,12 @@ public class DepotShoesInsertUpdate extends JPanel implements ActionListener {
 		dto.setGoodsLocation(location);
 		dto.setFkCategoryName(category);
 		
-		// °¡ÀÔ
+		// ê°€ì…
 		DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 		boolean ok = goodsDAO.insertGoods(dto);
 		
 		if(!ok) {
-			System.out.println("»óÇ° Ãß°¡ ¿À·ù!");
+			System.out.println("ìƒí’ˆ ì¶”ê°€ ì˜¤ë¥˜!");
 		}
 	}
 	
@@ -188,12 +188,12 @@ public class DepotShoesInsertUpdate extends JPanel implements ActionListener {
 		dto.setGoodsLocation(tfLocation.getText());
 		dto.setFkCategoryName("" + cbCategory.getSelectedItem());
 		
-		// °¡ÀÔ
+		// ê°€ì…
 		DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 		boolean ok = goodsDAO.updateGoods(dto);
 		
 		if(!ok) {
-			System.out.println("»óÇ° ¼öÁ¤ ¿À·ù!");
+			System.out.println("ìƒí’ˆ ìˆ˜ì • ì˜¤ë¥˜!");
 		}
 	}
 	
@@ -201,17 +201,17 @@ public class DepotShoesInsertUpdate extends JPanel implements ActionListener {
 		String historyStat = "";
 		
 		if(isInsert) {
-			historyStat = "Ãß°¡";
+			historyStat = "ì¶”ê°€";
 		}
 		else {
-			historyStat = "¼öÁ¤";
+			historyStat = "ìˆ˜ì •";
 		}
 		
 		String goodsName = tfName.getText();
 		String strAmount = tfAmount.getText();
 		int goodsAmount = Integer.parseInt(strAmount);
 		
-		// DTO¿¡ ´ã´Â´Ù
+		// DTOì— ë‹´ëŠ”ë‹¤
 		DepotHistoryDTO dto = new DepotHistoryDTO();
 		dto.setGoodsName(goodsName);
 		dto.setHistoryDetail(historyStat);
@@ -231,7 +231,7 @@ public class DepotShoesInsertUpdate extends JPanel implements ActionListener {
 			fMain.validate();
 			fMain.repaint();
 		} else {
-			System.out.println("ÀÌ·Â Ãß°¡ ¿À·ù!");
+			System.out.println("ì´ë ¥ ì¶”ê°€ ì˜¤ë¥˜!");
 		}
 	}
 

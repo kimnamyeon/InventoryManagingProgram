@@ -33,7 +33,7 @@ public class DepotMainFrame extends JFrame {
 	
 	public DepotMainFrame() {
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setTitle("¾Æµ¨¶ó Ã¢°í °ü¸® ÇÁ·Î±×·¥");
+		setTitle("ì•„ë¸ë¼ ì°½ê³  ê´€ë¦¬ í”„ë¡œê·¸ë¨");
 		setSize(1280, 720);
 				
 		pMenu = new DepotMenu(this);
@@ -49,7 +49,7 @@ public class DepotMainFrame extends JFrame {
 		pHistory = new HistoryPanel(this);
 		pManager = new ProjectManager(this);
 
-		// ·Î±×ÀÎ È­¸éÀ» º¸¿©ÁÜ (Ã¹ È­¸é)
+		// ë¡œê·¸ì¸ í™”ë©´ì„ ë³´ì—¬ì¤Œ (ì²« í™”ë©´)
 		add(pLogin);
 		
 		setVisible(true);

@@ -34,7 +34,7 @@ public class HistoryPanel extends JPanel{
 		pHistoryList.setBackground(Color.decode("#BDBDBD"));
 		//pHistoryList.setBackground(Color.PINK);
 		add(pHistoryList,BorderLayout.CENTER);
-		//ÀÌ·Â Å×ÀÌºí ºÙÀÌ±â
+		//ì´ë ¥ í…Œì´ë¸” ë¶™ì´ê¸°
 		tblHistory = new JTable(model);
 		tblHistory.setOpaque(false);
 		tblHistory.setShowGrid(false);
@@ -49,12 +49,12 @@ public class HistoryPanel extends JPanel{
 		pCenter.setBackground(Color.decode("#BDBDBD"));
 		pCenter.add(scrollPane);
 		pHistoryList.add(pCenter);
-			//vector titles ¿¡ ³»¿ë¹° Ãß°¡
+			//vector titles ì— ë‚´ìš©ë¬¼ ì¶”ê°€
 		titles = new Vector();
-		titles.add("No"); titles.add("»óÇ°¸í");
-		titles.add("ÀÌ·Â ³»¿ë"); titles.add("ÇöÀç ¼ö·®");
-		titles.add("¼öÁ¤ ³¯Â¥"); titles.add("°ü¸®ÀÚ ¸í");
-			//@@ ÀÓ½Ã @@ vector data¿¡ ³»¿ë¹° Ãß°¡ 
+		titles.add("No"); titles.add("ìƒí’ˆëª…");
+		titles.add("ì´ë ¥ ë‚´ìš©"); titles.add("í˜„ì¬ ìˆ˜ëŸ‰");
+		titles.add("ìˆ˜ì • ë‚ ì§œ"); titles.add("ê´€ë¦¬ì ëª…");
+			//@@ ì„ì‹œ @@ vector dataì— ë‚´ìš©ë¬¼ ì¶”ê°€ 
 		DAOclothes daoc = new DAOclothes();
 		data = daoc.showHistory();
 		

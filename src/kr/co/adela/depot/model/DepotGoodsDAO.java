@@ -15,7 +15,7 @@ public class DepotGoodsDAO {
 		Connection conn = getConn();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM goods where fk_category_name = '½Å¹ß'";
+		String sql = "SELECT * FROM goods where fk_category_name = 'ì‹ ë°œ'";
 		
 		try {
 			ps = conn.prepareStatement(sql);
@@ -37,7 +37,7 @@ public class DepotGoodsDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			// ÀÚ¿ø ÇØÁ¦
+			// ìì› í•´ì œ
 			release(conn, ps, rs);
 		}
 		
@@ -77,7 +77,7 @@ public class DepotGoodsDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			// ÀÚ¿ø ÇØÁ¦
+			// ìì› í•´ì œ
 			release(conn, ps, rs);
 		}
 		
@@ -96,7 +96,7 @@ public class DepotGoodsDAO {
 			
 			ps = conn.prepareStatement(sql);
 			
-			// À§¿¡ ¹°À½Ç¥¿¡ °ªÀ» ³ÖÀ½
+			// ìœ„ì— ë¬¼ìŒí‘œì— ê°’ì„ ë„£ìŒ
 			ps.setString(1, dto.getGoodsName());
 			ps.setString(2, dto.getGoodsDetail());
 			ps.setInt(3, dto.getGoodsPrice());
@@ -104,7 +104,7 @@ public class DepotGoodsDAO {
 			ps.setString(5, dto.getGoodsLocation());
 			ps.setString(6, dto.getFkCategoryName());
 			
-			// ½ÇÇà
+			// ì‹¤í–‰
 			result = ps.executeUpdate();
 			
 			if(result == 1) {

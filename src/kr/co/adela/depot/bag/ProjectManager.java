@@ -47,11 +47,11 @@ public class ProjectManager extends JPanel implements ActionListener {
 		pNorth = new JPanel();
 		//pNorth.setBackground(Color.gray);
 		
-		//pNorth.setLocation(50, 50); //À©µµ¿ì Ã¢ÀÌ »ı±â´Â ÁÂÇ¥
-	    pNorth.setPreferredSize(new Dimension(1175, 60)); // À©µµ¿ì½ÇÇà Ã¢ Å©±â
-		String[] strCbSch = { "¾Ç¼¼»ç¸®", "ÀÇ·ù", "½Å¹ß", "°¡¹æ" };
+		//pNorth.setLocation(50, 50); //ìœˆë„ìš° ì°½ì´ ìƒê¸°ëŠ” ì¢Œí‘œ
+	    pNorth.setPreferredSize(new Dimension(1175, 60)); // ìœˆë„ìš°ì‹¤í–‰ ì°½ í¬ê¸°
+		String[] strCbSch = { "ì•…ì„¸ì‚¬ë¦¬", "ì˜ë¥˜", "ì‹ ë°œ", "ê°€ë°©" };
 		cbSch = new JComboBox<>(strCbSch);
-		btnSearch = new JButton("°Ë»ö");
+		btnSearch = new JButton("ê²€ìƒ‰");
 		tfSearch = new JTextField(20);
         
 		pNorth.add(cbSch);
@@ -65,12 +65,12 @@ public class ProjectManager extends JPanel implements ActionListener {
 		
 		pWest.setLayout(new GridLayout(7, 1));
 		lblMark = new JLabel("Mark");
-		btnAccessory = new JButton("¾Ç¼¼»ç¸®");
-	    btnWear = new JButton("ÀÇ·ù");
-    	btnShouse = new JButton("½Å¹ß");
-		btnBag = new JButton("°¡¹æ");
-		btnUpdate = new JButton("ÀÌ·Â Á¶È¸");
-		btnManager = new JButton("°ü¸®ÀÚ ¸ñ·Ï");
+		btnAccessory = new JButton("ì•…ì„¸ì‚¬ë¦¬");
+	    btnWear = new JButton("ì˜ë¥˜");
+    	btnShouse = new JButton("ì‹ ë°œ");
+		btnBag = new JButton("ê°€ë°©");
+		btnUpdate = new JButton("ì´ë ¥ ì¡°íšŒ");
+		btnManager = new JButton("ê´€ë¦¬ì ëª©ë¡");
 		
 		pWest.add(lblMark);
 		pWest.add(btnAccessory);
@@ -85,14 +85,14 @@ public class ProjectManager extends JPanel implements ActionListener {
 		
 		ProjectDAO projectDAO = new ProjectDAO();
 		Vector cols1 = new Vector();
-		cols1.add("¾ÆÀÌµğ");
-		cols1.add("ºñ¹Ğ¹øÈ£");
-		cols1.add("ÀÌ¸§");
-		cols1.add("³ªÀÌ");
-		cols1.add("¼ºº°");
-		cols1.add("Á÷±Ş");
-		cols1.add("ÀüÈ­¹øÈ£");
-		cols1.add("ÁÖ¼Ò");
+		cols1.add("ì•„ì´ë””");
+		cols1.add("ë¹„ë°€ë²ˆí˜¸");
+		cols1.add("ì´ë¦„");
+		cols1.add("ë‚˜ì´");
+		cols1.add("ì„±ë³„");
+		cols1.add("ì§ê¸‰");
+		cols1.add("ì „í™”ë²ˆí˜¸");
+		cols1.add("ì£¼ì†Œ");
 		vt = projectDAO.Projectmanager();
 		System.out.println(vt);
 		jtable = new JTable(vt, cols1);
@@ -112,14 +112,14 @@ public class ProjectManager extends JPanel implements ActionListener {
 	public void showManager() {
 		ProjectDAO projectDAO = new ProjectDAO();
 		Vector cols1 = new Vector();
-		cols1.add("¾ÆÀÌµğ");
-		cols1.add("ºñ¹Ğ¹øÈ£");
-		cols1.add("ÀÌ¸§");
-		cols1.add("³ªÀÌ");
-		cols1.add("¼ºº°");
-		cols1.add("Á÷±Ş");
-		cols1.add("ÀüÈ­¹øÈ£");
-		cols1.add("ÁÖ¼Ò");
+		cols1.add("ì•„ì´ë””");
+		cols1.add("ë¹„ë°€ë²ˆí˜¸");
+		cols1.add("ì´ë¦„");
+		cols1.add("ë‚˜ì´");
+		cols1.add("ì„±ë³„");
+		cols1.add("ì§ê¸‰");
+		cols1.add("ì „í™”ë²ˆí˜¸");
+		cols1.add("ì£¼ì†Œ");
 		vt = projectDAO.Projectmanager();
 		model = new DefaultTableModel(vt, cols1);
 		jtable.setModel(model);
@@ -134,7 +134,7 @@ public class ProjectManager extends JPanel implements ActionListener {
 			f.invalidate();
 			f.validate();
 			f.repaint();
-			System.out.println("°ü¸®ÀÚ");
+			System.out.println("ê´€ë¦¬ì");
 			
 		} else if ( e.getSource() == btnBag ) {
 			f.remove(this);
@@ -143,7 +143,7 @@ public class ProjectManager extends JPanel implements ActionListener {
 			f.invalidate();
 			f.validate();
 			f.repaint();
-			System.out.println("°¡¹æ");
+			System.out.println("ê°€ë°©");
 		}
 		
 	}

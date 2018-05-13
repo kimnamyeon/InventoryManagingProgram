@@ -43,21 +43,21 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 		this.f = f;
 		this.inUp = inUp;
 		setBackground(Color.WHITE);
-		setLayout(new BorderLayout()); // << setBounds ¸¦ »ç¿ëÇÏ±â¿¡ Àß¸øµÈ ¿¹
-		// setLayout(null); // setBounds ¸¦ »ç¿ëÇÏ·Á¸é setLayout¿¡ null °ªÀ» ÁöÁ¤ÇØ ÁÖ¾î¾ß ÇÑ´Ù.
-		// ¼öÁ¤ Ä«Å×°í¸® ÇÏ³ªÇÏ³ª¸¦ ÆĞ³ÎÀ» ÀÌ¿ëÇØ »ı¼º ºÙ¿©ÁØ´Ù.
+		setLayout(new BorderLayout()); // << setBounds ë¥¼ ì‚¬ìš©í•˜ê¸°ì— ì˜ëª»ëœ ì˜ˆ
+		// setLayout(null); // setBounds ë¥¼ ì‚¬ìš©í•˜ë ¤ë©´ setLayoutì— null ê°’ì„ ì§€ì •í•´ ì£¼ì–´ì•¼ í•œë‹¤.
+		// ìˆ˜ì • ì¹´í…Œê³ ë¦¬ í•˜ë‚˜í•˜ë‚˜ë¥¼ íŒ¨ë„ì„ ì´ìš©í•´ ìƒì„± ë¶™ì—¬ì¤€ë‹¤.
 
 		pWest = new JPanel();
 		pWest.setBackground(Color.decode("#BDBDBD"));
 		//pWest.setPreferredSize(new Dimension(200, 150));
 		pWest.setLayout(new GridLayout(7, 1));
 		lblMark = new JLabel("Mark");
-		btnAccessory = new JButton("¾Ç¼¼»ç¸®");
-		btnWear = new JButton("ÀÇ·ù");
-		btnShouse = new JButton("½Å¹ß");
-		btnBag = new JButton("°¡¹æ");
-		btnCheck = new JButton("ÀÌ·Â Á¶È¸");
-		btnManager = new JButton("°ü¸®ÀÚ ¸ñ·Ï");
+		btnAccessory = new JButton("ì•…ì„¸ì‚¬ë¦¬");
+		btnWear = new JButton("ì˜ë¥˜");
+		btnShouse = new JButton("ì‹ ë°œ");
+		btnBag = new JButton("ê°€ë°©");
+		btnCheck = new JButton("ì´ë ¥ ì¡°íšŒ");
+		btnManager = new JButton("ê´€ë¦¬ì ëª©ë¡");
 
 		pWest.add(lblMark);
 		pWest.add(btnAccessory);
@@ -72,24 +72,24 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 		pCenter.setLayout(null);
 		// pCenter.setBackground(Color.WHITE);
 
-		lblInsert = new JLabel("»óÇ° Ãß°¡/¼öÁ¤");
+		lblInsert = new JLabel("ìƒí’ˆ ì¶”ê°€/ìˆ˜ì •");
 		lblInsert.setForeground(new Color(138, 43, 226));
-		lblInsert.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
-		lblName = new JLabel("»ó Ç° ¸í : ");
-		lblName.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		lblInsert.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
+		lblName = new JLabel("ìƒ í’ˆ ëª… : ");
+		lblName.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 		lblName.setForeground(new Color(138, 43, 226));
-		lblDatail = new JLabel("»óÇ° ³»¿ë :  ");
+		lblDatail = new JLabel("ìƒí’ˆ ë‚´ìš© :  ");
 		lblDatail.setForeground(new Color(138, 43, 226));
-		lblDatail.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
-		lblPrice = new JLabel("»óÇ° °¡°İ : ");
+		lblDatail.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
+		lblPrice = new JLabel("ìƒí’ˆ ê°€ê²© : ");
 		lblPrice.setForeground(new Color(138, 43, 226));
-		lblPrice.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
-		lblAmount = new JLabel("»óÇ° ¼ö·® : ");
+		lblPrice.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
+		lblAmount = new JLabel("ìƒí’ˆ ìˆ˜ëŸ‰ : ");
 		lblAmount.setForeground(new Color(138, 43, 226));
-		lblAmount.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
-		lblLocation = new JLabel("»óÇ° À§Ä¡ : ");
+		lblAmount.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
+		lblLocation = new JLabel("ìƒí’ˆ ìœ„ì¹˜ : ");
 		lblLocation.setForeground(new Color(138, 43, 226));
-		lblLocation.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
+		lblLocation.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 30));
 
 		lblInsert.setBounds(361, 49, 400, 50);
 		lblName.setBounds(280, 150, 200, 50);
@@ -127,27 +127,27 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 		pCategory.setLayout(null);
 		tfName = new JTextField(30);
 		tfName.setBorder(new LineBorder(Color.decode("#9370DB"), 5));
-		tfName.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		tfName.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		tfName.setBounds(12, 5, 340, 45);
 		tfName.setOpaque(false);
 		tfDatail = new JTextField(20);
 		tfDatail.setBorder(new LineBorder(Color.decode("#9370DB"), 5));
-		tfDatail.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		tfDatail.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		tfDatail.setBounds(12, 5, 340, 45);
 		tfDatail.setOpaque(false);
 		tfPrice = new JTextField(20);
 		tfPrice.setBorder(new LineBorder(Color.decode("#9370DB"), 5));
-		tfPrice.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		tfPrice.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		tfPrice.setBounds(12, 5, 340, 45);
 		tfPrice.setOpaque(false);
 		tfAmount = new JTextField(20);
 		tfAmount.setBorder(new LineBorder(Color.decode("#9370DB"), 5));
-		tfAmount.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		tfAmount.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		tfAmount.setBounds(12, 5, 340, 45);
 		tfAmount.setOpaque(false);
 		tfLocation = new JTextField(20);
 		tfLocation.setBorder(new LineBorder(Color.decode("#9370DB"), 5));
-		tfLocation.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		tfLocation.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		tfLocation.setBounds(12, 5, 340, 45);
 		tfLocation.setOpaque(false);
 
@@ -189,7 +189,7 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 		pCenter.add(btnInsert);
 		pCenter.add(btnCancel);
 
-		String[] strCategory = { "°¡¹æ", "½Å¹ß", "ÀÇ·ù", "¾Ç¼¼»ç¸®" };
+		String[] strCategory = { "ê°€ë°©", "ì‹ ë°œ", "ì˜ë¥˜", "ì•…ì„¸ì‚¬ë¦¬" };
 		cbCategory = new JComboBox<>(strCategory);
 		pCategory.setBounds(250, 570, 100, 50);
 		pCategory.add(cbCategory);
@@ -206,11 +206,11 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 		btnInsert.addActionListener(this);
 		btnCancel.addActionListener(this);
 
-		// DB ¼öÁ¤ ¹öÆ°Å¬¸¯½Ã ÀÚµ¿ »ı¼º
+		// DB ìˆ˜ì • ë²„íŠ¼í´ë¦­ì‹œ ìë™ ìƒì„±
 
 		ProjectDAO projectDAO = new ProjectDAO();
 		ProjectDTO dtoUpdate = projectDAO.updateGoods();
-		// DTO >> È­¸é
+		// DTO >> í™”ë©´
 		if (inUp) {
 			boolean ok = projectDAO.updateGoods(dtoUpdate);
 			goodsNumber = dto.getGoods_number();
@@ -222,21 +222,21 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 		}
 
 	}
-	public void insertHistory() { // ÀÌ·ÂÈ­¸é 
+	public void insertHistory() { // ì´ë ¥í™”ë©´ 
 		String historyStat = "";
 		
 		if(inUp) {
-			historyStat = "¼öÁ¤";
+			historyStat = "ìˆ˜ì •";
 		}
 		else {
-			historyStat = "Ãß°¡";
+			historyStat = "ì¶”ê°€";
 		}
 		
 		String goodsName = tfName.getText();
 		String strAmount = tfAmount.getText();
 		int goodsAmount = Integer.parseInt(strAmount);
 		
-		// DTO¿¡ ´ã´Â´Ù
+		// DTOì— ë‹´ëŠ”ë‹¤
 		DepotHistoryDTO dto = new DepotHistoryDTO();
 		dto.setGoodsName(goodsName);
 		dto.setHistoryDetail(historyStat);
@@ -256,7 +256,7 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 			f.validate();
 			f.repaint();
 		} else {
-			System.out.println("ÀÌ·Â Ãß°¡ ¿À·ù!");
+			System.out.println("ì´ë ¥ ì¶”ê°€ ì˜¤ë¥˜!");
 		}
 	}
 
@@ -270,7 +270,7 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 			f.invalidate();
 			f.validate();
 			f.repaint();
-			//System.out.println("Ãë¼Ò");
+			//System.out.println("ì·¨ì†Œ");
 			
 		} else if ( e.getSource() == btnInsert ) {
 			if(inUp == false) {
@@ -284,7 +284,7 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 	}
 
 	private void ProjectInsert() {
-		//System.out.println("Ãß°¡/¼öÁ¤ ¹öÆ° !!");
+		//System.out.println("ì¶”ê°€/ìˆ˜ì • ë²„íŠ¼ !!");
 
 		String goods_name = tfName.getText();
 		String goods_detail = tfDatail.getText();
@@ -293,7 +293,7 @@ public class ProjectUpdate extends JPanel implements ActionListener {
 		String goods_location = tfLocation.getText();
 		String fk_category_name = (String) cbCategory.getSelectedItem();
 		String goods_number = goodsNumber;
-		// dto ¿¡ ´ã±â!!!
+		// dto ì— ë‹´ê¸°!!!
 		ProjectDTO dto = new ProjectDTO();
 		dto.setGoods_number(goodsNumber);
 		dto.setGoods_name(goods_name);

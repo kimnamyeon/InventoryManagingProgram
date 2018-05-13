@@ -38,13 +38,13 @@ public class UpdateDialog extends JDialog implements ActionListener{
 		setSize(600, 350);
 		getContentPane().setLayout(new BorderLayout());
 		
-		lblName = new JLabel("»óÇ°¸í");
-		lblDetail = new JLabel("»óÇ°¼³¸í");
+		lblName = new JLabel("ìƒí’ˆëª…");
+		lblDetail = new JLabel("ìƒí’ˆì„¤ëª…");
 		lblDetail.setBounds(95, 8, 52, 15);
-		lblPrice = new JLabel("°¡°İ");
-		lblAmount = new JLabel("¼ö·®");
-		lblLocation = new JLabel("ÀúÀåÀ§Ä¡");
-		lblCategory = new JLabel("Ä«Å×°í¸®");
+		lblPrice = new JLabel("ê°€ê²©");
+		lblAmount = new JLabel("ìˆ˜ëŸ‰");
+		lblLocation = new JLabel("ì €ì¥ìœ„ì¹˜");
+		lblCategory = new JLabel("ì¹´í…Œê³ ë¦¬");
 		
 		tfName = new JTextField(30);
 		tfDetail = new JTextField(30);
@@ -70,7 +70,7 @@ public class UpdateDialog extends JDialog implements ActionListener{
 			}
 		});
 			tfLocation = new JTextField(10);
-			String[] strCategory = {"¾Ç¼¼»ç¸®", "°¡¹æ", "½Å¹ß", "°¡¹æ"};
+			String[] strCategory = {"ì•…ì„¸ì‚¬ë¦¬", "ê°€ë°©", "ì‹ ë°œ", "ê°€ë°©"};
 			cbCategory = new JComboBox<>(strCategory);
 			
 			pCenter = new JPanel();
@@ -84,8 +84,8 @@ public class UpdateDialog extends JDialog implements ActionListener{
 			pTitle = new JPanel();
 			pTitle.setBounds(12, 2, 560, 41);
 			pCenter.add(pTitle);
-			lblTitle = new JLabel("¼öÁ¤ ÆË¾÷Ã¢");
-			lblTitle.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+			lblTitle = new JLabel("ìˆ˜ì • íŒì—…ì°½");
+			lblTitle.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 15));
 			pTitle.add(lblTitle);
 			
 			pName = new JPanel(new FlowLayout());
@@ -123,8 +123,8 @@ public class UpdateDialog extends JDialog implements ActionListener{
 			pCategory.add(lblCategory);
 			pCategory.add(cbCategory);
 			
-			btnOk = new JButton("È®ÀÎ");
-			btnCancel = new JButton("Ãë¼Ò");
+			btnOk = new JButton("í™•ì¸");
+			btnCancel = new JButton("ì·¨ì†Œ");
 			pSouth.add(btnOk);
 			pSouth.add(btnCancel);
 			btnOk.addActionListener(this);
@@ -185,7 +185,7 @@ public class UpdateDialog extends JDialog implements ActionListener{
 			if(ok) {
 				ap.updateTable();
 				this.setVisible(false);
-				System.out.println("¼öÁ¤¼º°ø");
+				System.out.println("ìˆ˜ì •ì„±ê³µ");
 			}
 		}else if(e.getSource()==btnCancel) {
 			dispose();
@@ -193,23 +193,23 @@ public class UpdateDialog extends JDialog implements ActionListener{
 	} //actionPerformed
 	private void checkValue() {
 		if(tfName.getText().length() == 0 ) {
-			JOptionPane.showMessageDialog(this, "»óÇ°¸íÀ» ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+			JOptionPane.showMessageDialog(this, "ìƒí’ˆëª…ì„ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
 				tfName.requestFocus();
 		}
 		if(tfDetail.getText().length() == 0) {
-			JOptionPane.showMessageDialog(this, "»óÇ° ¼³¸íÀ» ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+			JOptionPane.showMessageDialog(this, "ìƒí’ˆ ì„¤ëª…ì„ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
 			tfDetail.requestFocus();
 		}
 		if(tfPrice.getText().equals("")) {
-			JOptionPane.showMessageDialog(this, "°¡°İÀ» ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+			JOptionPane.showMessageDialog(this, "ê°€ê²©ì„ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
 			tfPrice.requestFocus();
 		}
 		if(tfAmount.getText().equals("")) {
-			JOptionPane.showMessageDialog(this,  "¼ö·®À» ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+			JOptionPane.showMessageDialog(this,  "ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
 			tfAmount.requestFocus();
 		}
 		if(tfLocation.getText().length() == 0) {
-			JOptionPane.showMessageDialog(this,  "»óÇ° À§Ä¡¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+			JOptionPane.showMessageDialog(this,  "ìƒí’ˆ ìœ„ì¹˜ë¥¼ ì…ë ¥í•˜ì‹­ì‹œì˜¤.");
 			tfLocation.requestFocus();
 		}//CheckValue
 	}

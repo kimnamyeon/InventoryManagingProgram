@@ -14,7 +14,7 @@ public class GoodsDAO {
 		Connection conn = getConn();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "select * from goods where fk_category_name = '¾Ç¼¼»ç¸®'";
+		String sql = "select * from goods where fk_category_name = 'ì•…ì„¸ì‚¬ë¦¬'";
 		Vector data = new Vector();
 
 		try {
@@ -62,10 +62,10 @@ public class GoodsDAO {
 
 			result = ps.executeUpdate();
 			if (result == 1) {
-				System.out.println("ÀúÀåÀ» ¼º°øÇÏ¿´´Ù.");
+				System.out.println("ì €ì¥ì„ ì„±ê³µí•˜ì˜€ë‹¤.");
 				ok = true;
 			} else {
-				System.out.println("ÀúÀåÀ» ½ÇÆĞÇÏ¿´´Ù.");
+				System.out.println("ì €ì¥ì„ ì‹¤íŒ¨í•˜ì˜€ë‹¤.");
 			}
 
 		} catch (SQLException e) {
@@ -100,10 +100,10 @@ public class GoodsDAO {
 			result = ps.executeUpdate();
 			
 			if(result == 1) {
-				System.out.println("¼öÁ¤ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				System.out.println("ìˆ˜ì • ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 				ok = true;
 			}else {
-				System.out.println("¼öÁ¤ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+				System.out.println("ìˆ˜ì • ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 		
 		} catch (SQLException e) {
@@ -130,7 +130,7 @@ public class GoodsDAO {
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1,  dtoAcc.getGoodsNumber());
 			result = ps.executeUpdate();
-			if(result == 1) { //»èÁ¦ Ä¿¸® ¹ßµ¿!
+			if(result == 1) { //ì‚­ì œ ì»¤ë¦¬ ë°œë™!
 				ok = true;
 			} 
 			
@@ -144,7 +144,7 @@ public class GoodsDAO {
 
 	
 	
-	// º¹ºÙ db ¿¬°á°ü·Ã ¼Ò½º
+	// ë³µë¶™ db ì—°ê²°ê´€ë ¨ ì†ŒìŠ¤
 	private void release(Connection conn, PreparedStatement ps) {
 		if (ps != null) {
 			try {
@@ -176,7 +176,7 @@ public class GoodsDAO {
 	private Connection getConn() {
 		Connection conn = null;
 		String dbUrl =
-				// ¸¶¸®¾Æ DB »ç¿ëÀÚ ¸í : TEST
+				// ë§ˆë¦¬ì•„ DB ì‚¬ìš©ì ëª… : TEST
 				"jdbc:mysql://localhost:3306/test?characterEncoding=utf-8";
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");

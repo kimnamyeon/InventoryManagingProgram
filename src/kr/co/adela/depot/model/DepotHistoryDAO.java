@@ -20,14 +20,14 @@ public class DepotHistoryDAO {
 			
 			ps = conn.prepareStatement(sql);
 			
-			// À§¿¡ ¹°À½Ç¥¿¡ °ªÀ» ³ÖÀ½
+			// ìœ„ì— ë¬¼ìŒí‘œì— ê°’ì„ ë„£ìŒ
 			ps.setString(1, dto.getGoodsName());
 			ps.setString(2, dto.getHistoryDetail());
 			ps.setInt(3, dto.getGoodsAmount());
 			ps.setString(4, dto.getManagerId());
 			ps.setString(5, dto.getManagerName());
 			
-			// ½ÇÇà
+			// ì‹¤í–‰
 			result = ps.executeUpdate();
 			
 			if(result == 1) {

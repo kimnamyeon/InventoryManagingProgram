@@ -34,7 +34,7 @@ public class DepotSearch extends JPanel implements ActionListener {
 		this.fMain = fMain;
 		setBackground(Color.decode("#BDBDBD"));
 
-		String[] strSearch = { "»óÇ°¸í", "»óÇ°¼³¸í", "»óÇ°À§Ä¡"};
+		String[] strSearch = { "ìƒí’ˆëª…", "ìƒí’ˆì„¤ëª…", "ìƒí’ˆìœ„ì¹˜"};
 		cbSearch = new JComboBox<>(strSearch);
 		tfSearch = new JTextField(20);
 		ImageIcon imgSearch = new ImageIcon(search);
@@ -65,7 +65,7 @@ public class DepotSearch extends JPanel implements ActionListener {
 			String location = "%";
 
 			if (searchString.length() == 0) {
-				JOptionPane.showMessageDialog(this, "°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+				JOptionPane.showMessageDialog(this, "ê²€ìƒ‰ì–´ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 				return;
 			} else if (cbSearch.getSelectedIndex() == 0) {
 				name = "%" + tfSearch.getText() + "%";
@@ -85,78 +85,78 @@ public class DepotSearch extends JPanel implements ActionListener {
 				DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 				Vector<Object> datas = new Vector<>();
 				Vector<String> cols = new Vector<>();
-				cols.add("»óÇ°¹øÈ£");
-				cols.add("»óÇ°¸í");
-				cols.add("»óÇ°¼³¸í");
-				cols.add("°¡°İ");
-				cols.add("¼ö·®");
-				cols.add("»óÇ°À§Ä¡");
-				cols.add("ÀÔ°íÀÏ");
-				cols.add("Ä«Å×°í¸®");
+				cols.add("ìƒí’ˆë²ˆí˜¸");
+				cols.add("ìƒí’ˆëª…");
+				cols.add("ìƒí’ˆì„¤ëª…");
+				cols.add("ê°€ê²©");
+				cols.add("ìˆ˜ëŸ‰");
+				cols.add("ìƒí’ˆìœ„ì¹˜");
+				cols.add("ì…ê³ ì¼");
+				cols.add("ì¹´í…Œê³ ë¦¬");
 				datas = goodsDAO.searchGoods(dto);
 				DefaultTableModel tableModel = new DefaultTableModel(datas, cols);
 				InitPanel.tblInit.setModel(tableModel);
-			} else if(DepotMainFrame.searchCategory == "ÀÇ·ù") {
+			} else if(DepotMainFrame.searchCategory == "ì˜ë¥˜") {
 				dto.setFkCategoryName(DepotMainFrame.searchCategory);
 				DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 				Vector<Object> datas = new Vector<>();
 				Vector<String> cols = new Vector<>();
-				cols.add("»óÇ°¹øÈ£");
-				cols.add("»óÇ°¸í");
-				cols.add("»óÇ°¼³¸í");
-				cols.add("°¡°İ");
-				cols.add("¼ö·®");
-				cols.add("»óÇ°À§Ä¡");
-				cols.add("ÀÔ°íÀÏ");
-				cols.add("Ä«Å×°í¸®");
+				cols.add("ìƒí’ˆë²ˆí˜¸");
+				cols.add("ìƒí’ˆëª…");
+				cols.add("ìƒí’ˆì„¤ëª…");
+				cols.add("ê°€ê²©");
+				cols.add("ìˆ˜ëŸ‰");
+				cols.add("ìƒí’ˆìœ„ì¹˜");
+				cols.add("ì…ê³ ì¼");
+				cols.add("ì¹´í…Œê³ ë¦¬");
 				datas = goodsDAO.searchGoods(dto);
 				DefaultTableModel tableModel = new DefaultTableModel(datas, cols);
 				ClothesMain.tblClothes.setModel(tableModel);
-			} else if(DepotMainFrame.searchCategory == "½Å¹ß") {
+			} else if(DepotMainFrame.searchCategory == "ì‹ ë°œ") {
 				dto.setFkCategoryName(DepotMainFrame.searchCategory);
 				DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 				Vector<Object> datas = new Vector<>();
 				Vector<String> cols = new Vector<>();
-				cols.add("»óÇ°¹øÈ£");
-				cols.add("»óÇ°¸í");
-				cols.add("»óÇ°¼³¸í");
-				cols.add("°¡°İ");
-				cols.add("¼ö·®");
-				cols.add("»óÇ°À§Ä¡");
-				cols.add("ÀÔ°íÀÏ");
-				cols.add("Ä«Å×°í¸®");
+				cols.add("ìƒí’ˆë²ˆí˜¸");
+				cols.add("ìƒí’ˆëª…");
+				cols.add("ìƒí’ˆì„¤ëª…");
+				cols.add("ê°€ê²©");
+				cols.add("ìˆ˜ëŸ‰");
+				cols.add("ìƒí’ˆìœ„ì¹˜");
+				cols.add("ì…ê³ ì¼");
+				cols.add("ì¹´í…Œê³ ë¦¬");
 				datas = goodsDAO.searchGoods(dto);
 				DefaultTableModel tableModel = new DefaultTableModel(datas, cols);
 				DepotShoes.jtable.setModel(tableModel);
-			} else if(DepotMainFrame.searchCategory == "°¡¹æ") {
+			} else if(DepotMainFrame.searchCategory == "ê°€ë°©") {
 				dto.setFkCategoryName(DepotMainFrame.searchCategory);
 				DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 				Vector<Object> datas = new Vector<>();
 				Vector<String> cols = new Vector<>();
-				cols.add("»óÇ°¹øÈ£");
-				cols.add("»óÇ°¸í");
-				cols.add("»óÇ°¼³¸í");
-				cols.add("°¡°İ");
-				cols.add("¼ö·®");
-				cols.add("»óÇ°À§Ä¡");
-				cols.add("ÀÔ°íÀÏ");
-				cols.add("Ä«Å×°í¸®");
+				cols.add("ìƒí’ˆë²ˆí˜¸");
+				cols.add("ìƒí’ˆëª…");
+				cols.add("ìƒí’ˆì„¤ëª…");
+				cols.add("ê°€ê²©");
+				cols.add("ìˆ˜ëŸ‰");
+				cols.add("ìƒí’ˆìœ„ì¹˜");
+				cols.add("ì…ê³ ì¼");
+				cols.add("ì¹´í…Œê³ ë¦¬");
 				datas = goodsDAO.searchGoods(dto);
 				DefaultTableModel tableModel = new DefaultTableModel(datas, cols);
 				ProjectBag.jtable.setModel(tableModel);
-			} else if(DepotMainFrame.searchCategory == "¾Ç¼¼»ç¸®") {
+			} else if(DepotMainFrame.searchCategory == "ì•…ì„¸ì‚¬ë¦¬") {
 				dto.setFkCategoryName(DepotMainFrame.searchCategory);
 				DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 				Vector<Object> datas = new Vector<>();
 				Vector<String> cols = new Vector<>();
-				cols.add("»óÇ°¹øÈ£");
-				cols.add("»óÇ°¸í");
-				cols.add("»óÇ°¼³¸í");
-				cols.add("°¡°İ");
-				cols.add("¼ö·®");
-				cols.add("»óÇ°À§Ä¡");
-				cols.add("ÀÔ°íÀÏ");
-				cols.add("Ä«Å×°í¸®");
+				cols.add("ìƒí’ˆë²ˆí˜¸");
+				cols.add("ìƒí’ˆëª…");
+				cols.add("ìƒí’ˆì„¤ëª…");
+				cols.add("ê°€ê²©");
+				cols.add("ìˆ˜ëŸ‰");
+				cols.add("ìƒí’ˆìœ„ì¹˜");
+				cols.add("ì…ê³ ì¼");
+				cols.add("ì¹´í…Œê³ ë¦¬");
 				datas = goodsDAO.searchGoods(dto);
 				DefaultTableModel tableModel = new DefaultTableModel(datas, cols);
 				AccPanel.accTable.setModel(tableModel);
