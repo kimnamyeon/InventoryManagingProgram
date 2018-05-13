@@ -112,23 +112,23 @@ public class JoinPanel extends JPanel implements ActionListener {
 		ImageIcon imgCancel = new ImageIcon(cancel);
 		ImageIcon imgCancelClick = new ImageIcon(cancelClick);
 		
-		//Ä«Å×°í¸®
-		JLabel lblCategory_1 = new JLabel("Ä«Å×°í¸®");
+		//ì¹´í…Œê³ ë¦¬
+		JLabel lblCategory_1 = new JLabel("ì¹´í…Œê³ ë¦¬");
 		lblCategory_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCategory_1.setBounds(0, 0, 102, 36);
 		pCate.add(lblCategory_1);
-		lblCategory_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
+		lblCategory_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
 		
-		//ÁÖ¼Ò
-		JLabel lblAddr_1 = new JLabel("ÁÖ¼Ò");
+		//ì£¼ì†Œ
+		JLabel lblAddr_1 = new JLabel("ì£¼ì†Œ");
 		lblAddr_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddr_1.setBounds(0, 0, 102, 36);
 		pAddr.add(lblAddr_1);
-		lblAddr_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
-		tfAddr = new JTextField("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä") {
+		lblAddr_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
+		tfAddr = new JTextField("ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš”") {
 			public void setBorder(Border border) {}
 		};
-		tfAddr.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 12));
+		tfAddr.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 12));
 		tfAddr.setForeground(Color.WHITE);
 		tfAddr.setOpaque(false);
 		tfAddr.setBounds(110, 0, 278, 36);
@@ -148,16 +148,16 @@ public class JoinPanel extends JPanel implements ActionListener {
 		pAddr.add(tfAddr);
 		tfAddr.setColumns(10);
 		
-		//¿¬¶ôÃ³
-		JLabel lblPhone_1 = new JLabel("¿¬¶ôÃ³");
+		//ì—°ë½ì²˜
+		JLabel lblPhone_1 = new JLabel("ì—°ë½ì²˜");
 		lblPhone_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPhone_1.setBounds(0, 0, 102, 36);
 		pPhone.add(lblPhone_1);
-		lblPhone_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
-		tfPhone = new JTextField("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä") {
+		lblPhone_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
+		tfPhone = new JTextField("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”") {
 			public void setBorder(Border border) {}
 		};
-		tfPhone.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 12));
+		tfPhone.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 12));
 		tfPhone.setForeground(Color.WHITE);
 		tfPhone.setOpaque(false);
 		tfPhone.setBounds(110, 0, 278, 36);
@@ -177,16 +177,16 @@ public class JoinPanel extends JPanel implements ActionListener {
 		pPhone.add(tfPhone);
 		tfPhone.setColumns(10);
 		
-		//Á÷À§
-		JLabel lblPosition_1 = new JLabel("Á÷À§");
+		//ì§ìœ„
+		JLabel lblPosition_1 = new JLabel("ì§ìœ„");
 		lblPosition_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPosition_1.setBounds(0, 0, 102, 36);
 		pRank.add(lblPosition_1);
-		lblPosition_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
-		tfPosition = new JTextField("Á÷À§¸¦ ÀÔ·ÂÇÏ¼¼¿ä") {
+		lblPosition_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
+		tfPosition = new JTextField("ì§ìœ„ë¥¼ ì…ë ¥í•˜ì„¸ìš”") {
 			public void setBorder(Border border) {}
 		};
-		tfPosition.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 12));
+		tfPosition.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 12));
 		tfPosition.setForeground(Color.WHITE);
 		tfPosition.setOpaque(false);
 		tfPosition.setBounds(110, 0, 278, 36);
@@ -206,16 +206,16 @@ public class JoinPanel extends JPanel implements ActionListener {
 		pRank.add(tfPosition);
 		tfPosition.setColumns(10);
 		
-		//³ªÀÌ
-		JLabel lblAge_1 = new JLabel("³ªÀÌ");
+		//ë‚˜ì´
+		JLabel lblAge_1 = new JLabel("ë‚˜ì´");
 		lblAge_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAge_1.setBounds(0, 0, 102, 36);
 		pAgeSex.add(lblAge_1);
-		lblAge_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
+		lblAge_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
 		tfAge = new JTextField("ex)20") {
 			public void setBorder(Border border) {}
 		};
-		tfAge.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 12));
+		tfAge.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 12));
 		tfAge.setForeground(Color.WHITE);
 		tfAge.setOpaque(false);
 		tfAge.setBounds(110, 0, 71, 36);
@@ -235,18 +235,18 @@ public class JoinPanel extends JPanel implements ActionListener {
 		pAgeSex.add(tfAge);
 		tfAge.setColumns(10);
 		
-		JLabel label = new JLabel("¼ºº°");
+		JLabel label = new JLabel("ì„±ë³„");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setBounds(193, 0, 77, 36);
 		pAgeSex.add(label);
-		label.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
+		label.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
 		
-		rbMan = new JRadioButton("³²");
+		rbMan = new JRadioButton("ë‚¨");
 		rbMan.setBounds(292, 6, 45, 23);
 		pAgeSex.add(rbMan);
 		rbMan.setOpaque(false);
 		
-		rbWoman = new JRadioButton("¿©");
+		rbWoman = new JRadioButton("ì—¬");
 		rbWoman.setBounds(344, 6, 45, 23);
 		pAgeSex.add(rbWoman);
 		rbWoman.setOpaque(false);
@@ -254,16 +254,16 @@ public class JoinPanel extends JPanel implements ActionListener {
 		buttonGroup.add(rbMan);
 		buttonGroup.add(rbWoman);
 		
-		// ¼º¸í
-		JLabel lblName_1 = new JLabel("¼º¸í");
+		// ì„±ëª…
+		JLabel lblName_1 = new JLabel("ì„±ëª…");
 		lblName_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblName_1.setBounds(0, 0, 102, 36);
 		pName.add(lblName_1);
-		lblName_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
-		tfName = new JTextField("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä") {
+		lblName_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
+		tfName = new JTextField("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”") {
 			public void setBorder(Border border) {}
 		};
-		tfName.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 12));
+		tfName.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 12));
 		tfName.setForeground(new Color(255, 255, 255));
 		tfName.setOpaque(false);
 		tfName.addFocusListener(new FocusListener() {
@@ -283,13 +283,13 @@ public class JoinPanel extends JPanel implements ActionListener {
 		pName.add(tfName);
 		tfName.setColumns(10);
 		
-		//PW ¶óº§
-		JLabel lblPwd_1 = new JLabel("ºñ¹Ğ¹øÈ£");
+		//PW ë¼ë²¨
+		JLabel lblPwd_1 = new JLabel("ë¹„ë°€ë²ˆí˜¸");
 		lblPwd_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPwd_1.setBounds(0, 0, 102, 36);
 		pPwd.add(lblPwd_1);
-		lblPwd_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
-		//PWD ÅØ½ºÆ®ÇÊµå
+		lblPwd_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
+		//PWD í…ìŠ¤íŠ¸í•„ë“œ
 		pfPwd = new JPasswordField("") {
 			public void setBorder(Border border) {}
 		};
@@ -300,18 +300,18 @@ public class JoinPanel extends JPanel implements ActionListener {
 		pfPwd.setColumns(10);
 		
 		
-		//ID ¶óº§		
-		JLabel lblId_1 = new JLabel("¾ÆÀÌµğ");
+		//ID ë¼ë²¨		
+		JLabel lblId_1 = new JLabel("ì•„ì´ë””");
 		lblId_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblId_1.setBounds(0, 0, 102, 36);
 		pId.add(lblId_1);
-		lblId_1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 17));
+		lblId_1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 17));
 		lblId_1.setBackground(Color.WHITE);
-		//ID ÅØ½ºÆ®ÇÊµå
-		tfId = new JTextField("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä") {
+		//ID í…ìŠ¤íŠ¸í•„ë“œ
+		tfId = new JTextField("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”") {
 			public void setBorder(Border border) {}
 		};
-		tfId.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 12));
+		tfId.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 12));
 		tfId.setForeground(Color.WHITE);
 		tfId.setBounds(110, 0, 175, 36);
 		tfId.setOpaque(false);
@@ -339,16 +339,16 @@ public class JoinPanel extends JPanel implements ActionListener {
 		btnCheck.setContentAreaFilled(false);
 		btnCheck.setPressedIcon(imgIdCheckClick);
 		btnCheck.addActionListener(this);
-		//Á¦¸ñ
-		JLabel lblSignin = new JLabel("È¸¿ø°¡ÀÔ");
+		//ì œëª©
+		JLabel lblSignin = new JLabel("íšŒì›ê°€ì…");
 		lblSignin.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSignin.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
+		lblSignin.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 40));
 		lblSignin.setBounds(78, 31, 317, 51);
 		pJoin.add(lblSignin);
-		//ID Áßº¹È®ÀÎ btn
+		//ID ì¤‘ë³µí™•ì¸ btn
 		
-		//È®ÀÎ&Ãë¼Ò ¹öÆ°
-		//ID Áßº¹È®ÀÎ
+		//í™•ì¸&ì·¨ì†Œ ë²„íŠ¼
+		//ID ì¤‘ë³µí™•ì¸
 		
 		btnOk = new JButton(imgOk_);
 		btnOk.setBounds(165, 484, 75, 51);
@@ -369,12 +369,12 @@ public class JoinPanel extends JPanel implements ActionListener {
 		btnCancel.addActionListener(this);
 		
 		
-		String[] strCategory = new String[] {"ÀÇ·ù", "°¡¹æ", "½Å¹ß", "¾Ç¼¼»ç¸®"};
+		String[] strCategory = new String[] {"ì˜ë¥˜", "ê°€ë°©", "ì‹ ë°œ", "ì•…ì„¸ì‚¬ë¦¬"};
 		cbCategory = new JComboBox<>(strCategory);
 		cbCategory.setBounds(140, 445, 200, 21);
 		pJoin.add(cbCategory);
 		
-	}//»ı¼ºÀÚ ³¡
+	}//ìƒì„±ì ë
 	@Override
 	public void paint(Graphics g) {
 		g.drawImage(bgImage, 0, 0, getWidth(),getHeight(),this);
@@ -387,7 +387,7 @@ public class JoinPanel extends JPanel implements ActionListener {
 			String id = tfId.getText();
 
 			if(id.length() == 0) {
-				JOptionPane.showMessageDialog(this, "¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				JOptionPane.showMessageDialog(this, "ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				return;
 			}
 			
@@ -395,9 +395,9 @@ public class JoinPanel extends JPanel implements ActionListener {
 			boolean ok = memberDAO.idCheck(id);
 			
 			if(!ok) {
-				JOptionPane.showMessageDialog(this, "»ç¿ëÇÏ¼Åµµ ±¦ÂúÀº ¾ÆÀÌµğÀÔ´Ï´Ù.");
+				JOptionPane.showMessageDialog(this, "ì‚¬ìš©í•˜ì…”ë„ ê´œì°®ì€ ì•„ì´ë””ì…ë‹ˆë‹¤.");
 			} else {
-				JOptionPane.showMessageDialog(this, "ÀÌ¹Ì »ç¿ë ÁßÀÎ ¾ÆÀÌµğÀÔ´Ï´Ù.\n´Ù¸¥ ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				JOptionPane.showMessageDialog(this, "ì´ë¯¸ ì‚¬ìš© ì¤‘ì¸ ì•„ì´ë””ì…ë‹ˆë‹¤.\në‹¤ë¥¸ ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		} else if(e.getSource() == btnCancel ) {
 			mf.remove(this);
@@ -412,10 +412,10 @@ public class JoinPanel extends JPanel implements ActionListener {
 	}//actionPerformed
 	
 	private void joinMember() {
-		System.out.println("È¸¿ø°¡ÀÔ ¹öÆ° Å¬¸¯");
+		System.out.println("íšŒì›ê°€ì… ë²„íŠ¼ í´ë¦­");
 		String id = tfId.getText();
 		if( id.length() == 0 ) {
-			JOptionPane.showMessageDialog(this, "¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+			JOptionPane.showMessageDialog(this, "ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 			tfId.requestFocus();
 		}
 		String pwd = pfPwd.getText();
@@ -424,10 +424,10 @@ public class JoinPanel extends JPanel implements ActionListener {
 		int age = Integer.parseInt(strAge);
 		String sex = "";
 			if( rbMan.isSelected() ) {
-				sex = "³²";
+				sex = "ë‚¨";
 			}
 			if( rbWoman.isSelected()) {
-				sex = "¿©";
+				sex = "ì—¬";
 			}
 			System.out.println("sex=" + sex);
 		String position = tfPosition.getText();
@@ -449,14 +449,14 @@ public class JoinPanel extends JPanel implements ActionListener {
 		MemberDAO memberDAO = new MemberDAO();
 		boolean ok = memberDAO.createMember(dto);
 		if (ok) {
-			JOptionPane.showMessageDialog(this, "È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			JOptionPane.showMessageDialog(this, "íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			mf.remove(this);
 			mf.getContentPane().add(DepotMainFrame.pLogin);
 			mf.invalidate();
 			mf.validate();
 			mf.repaint();
 		} else {
-			JOptionPane.showMessageDialog(this, "¿À·ù ¹ß»ı : ´Ù½Ã °¡ÀÔÇØÁÖ¼¼¿ä!!!");
+			JOptionPane.showMessageDialog(this, "ì˜¤ë¥˜ ë°œìƒ : ë‹¤ì‹œ ê°€ì…í•´ì£¼ì„¸ìš”!!!");
 		}
 	}//joinMember
 	

@@ -55,78 +55,78 @@ public class AccPanel extends JPanel implements MouseListener, ActionListener {
 		this.mF = mF;
 		setLayout(new BorderLayout());
 		setBackground(Color.WHITE);
-		// pWest »ı¼º
+		// pWest ìƒì„±
 		pWest = new JPanel();
 		pWest.setBackground(Color.decode("#BDBDBD"));
 		pWest.setBounds(0, 0, 200, 720);
 		add(pWest, BorderLayout.WEST);
 		pWest.setLayout(null);
 
-		btnCloth = new JButton("ÀÇ·ù");
+		btnCloth = new JButton("ì˜ë¥˜");
 		btnCloth.setBounds(5, 5, 55, 23);
-		btnCloth.setFont(new Font("¸¼Àº°íµñ,", Font.BOLD, 10));
+		btnCloth.setFont(new Font("ë§‘ì€ê³ ë”•,", Font.BOLD, 10));
 		pWest.add(btnCloth);
 
-		btnBag = new JButton("°¡¹æ");
+		btnBag = new JButton("ê°€ë°©");
 		btnBag.setBounds(65, 5, 55, 23);
-		btnBag.setFont(new Font("¸¼Àº°íµñ", Font.BOLD, 10));
+		btnBag.setFont(new Font("ë§‘ì€ê³ ë”•", Font.BOLD, 10));
 		pWest.add(btnBag);
 
-		btnShoes = new JButton("½Å¹ß");
+		btnShoes = new JButton("ì‹ ë°œ");
 		btnShoes.setBounds(125, 5, 55, 23);
-		btnShoes.setFont(new Font("¸¼Àº°íµñ", Font.BOLD, 10));
+		btnShoes.setFont(new Font("ë§‘ì€ê³ ë”•", Font.BOLD, 10));
 		pWest.add(btnShoes);
 
-		btnAcc = new JButton("¾Ç¼¼»ç¸®");
+		btnAcc = new JButton("ì•…ì„¸ì‚¬ë¦¬");
 		btnAcc.setBounds(185, 5, 77, 23);
-		btnAcc.setFont(new Font("¸¼Àº°íµñ", Font.BOLD, 10));
+		btnAcc.setFont(new Font("ë§‘ì€ê³ ë”•", Font.BOLD, 10));
 		pWest.add(btnAcc);
 
-		btnLog = new JButton("ÀÌ·Â");
+		btnLog = new JButton("ì´ë ¥");
 		btnLog.setBounds(267, 5, 55, 23);
-		btnLog.setFont(new Font("¸¼Àº°íµñ", Font.BOLD, 10));
+		btnLog.setFont(new Font("ë§‘ì€ê³ ë”•", Font.BOLD, 10));
 		pWest.add(btnLog);
 
-		btnManagerList = new JButton("°ü¸®ÀÚ ¸ñ·Ï");
+		btnManagerList = new JButton("ê´€ë¦¬ì ëª©ë¡");
 		btnManagerList.setBounds(327, 5, 91, 23);
-		btnManagerList.setFont(new Font("¸¼Àº°íµñ", Font.BOLD, 10));
+		btnManagerList.setFont(new Font("ë§‘ì€ê³ ë”•", Font.BOLD, 10));
 		pWest.add(btnManagerList);
 
-		// pNorth »ı¼º
+		// pNorth ìƒì„±
 		pNorth = new JPanel();
 		pNorth.setBackground(Color.RED);
 		// add(pNorth, BorderLayout.NORTH);
 
-		String[] strCbSearch = new String[] { "ÀÇ·ù", "½Å¹ß", "°¡¹æ", "¾Ç¼¼»ç¸®" };
+		String[] strCbSearch = new String[] { "ì˜ë¥˜", "ì‹ ë°œ", "ê°€ë°©", "ì•…ì„¸ì‚¬ë¦¬" };
 		cbSearch = new JComboBox<>(strCbSearch);
 		pNorth.add(cbSearch);
 		tfSearch = new JTextField();
 		pNorth.add(tfSearch);
 		tfSearch.setColumns(10);
-		btnSearch = new JButton("°Ë»ö");
+		btnSearch = new JButton("ê²€ìƒ‰");
 		pNorth.add(btnSearch);
 
 		btnSearch.setHorizontalAlignment(SwingConstants.RIGHT);
 
-		// pCenter »ı¼º
+		// pCenter ìƒì„±
 		pCenter = new JPanel();
 
 		 pCenter.setBackground(Color.decode("#BDBDBD"));
 		add(pCenter, BorderLayout.CENTER);
 
-		// Table »ı¼º
+		// Table ìƒì„±
 		GoodsDAO dao = new GoodsDAO();
 		data = dao.showGoods();
 		data = new Vector();
 		titles = new Vector();
 		titles.add("NO");
-		titles.add("»óÇ°¸í");
-		titles.add("»óÇ°¼³¸í");
-		titles.add("°¡°İ");
-		titles.add("¼ö·®");
-		titles.add("À§Ä¡");
-		titles.add("³¯Â¥");
-		titles.add("Ä«Å×°í¸®");
+		titles.add("ìƒí’ˆëª…");
+		titles.add("ìƒí’ˆì„¤ëª…");
+		titles.add("ê°€ê²©");
+		titles.add("ìˆ˜ëŸ‰");
+		titles.add("ìœ„ì¹˜");
+		titles.add("ë‚ ì§œ");
+		titles.add("ì¹´í…Œê³ ë¦¬");
 		model = new DefaultTableModel(data, titles);
 		accTable = new JTable(model);
 		accTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -143,7 +143,7 @@ public class AccPanel extends JPanel implements MouseListener, ActionListener {
 		pCenter.add(pane);
 		updateTable();
 
-		// pSouth »ı¼º
+		// pSouth ìƒì„±
 		pSouth = new JPanel();
 		pSouth.setBackground(Color.decode("#BDBDBD"));
 		FlowLayout flowLayout = (FlowLayout) pSouth.getLayout();
@@ -229,12 +229,12 @@ public class AccPanel extends JPanel implements MouseListener, ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnAdd) {
-			dd = new DataDialog(this, "»óÇ° Ãß°¡!", true);
-			System.out.println("Ãß°¡");
+			dd = new DataDialog(this, "ìƒí’ˆ ì¶”ê°€!", true);
+			System.out.println("ì¶”ê°€");
 			MemberDTO dto = new MemberDTO();
 
 		} else if (e.getSource() == btnUpdate) {
-			System.out.println("¼öÁ¤¹öÆ°");
+			System.out.println("ìˆ˜ì •ë²„íŠ¼");
 			int upNumber = (int) selectData.get(0);
 			String upName = (String) selectData.get(1);
 			String upDetail = (String) selectData.get(2);
@@ -250,12 +250,12 @@ public class AccPanel extends JPanel implements MouseListener, ActionListener {
 			dto.setGoodsAmount(upAmount);
 			dto.setGoodsLocation(upLocation);
 			dto.setFkCategoryName(upCategory);
-			uD = new UpdateDialog(this, "»óÇ° ¼öÁ¤", true, dto);
+			uD = new UpdateDialog(this, "ìƒí’ˆ ìˆ˜ì •", true, dto);
 
 		} else if (e.getSource() == btnDelete) {
-			int result = JOptionPane.showConfirmDialog(this, "Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦", JOptionPane.OK_CANCEL_OPTION);
+			int result = JOptionPane.showConfirmDialog(this, "ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ", JOptionPane.OK_CANCEL_OPTION);
 			if (result == JOptionPane.YES_OPTION) {
-				System.out.println("È®ÀÎ");
+				System.out.println("í™•ì¸");
 				System.out.println("select Data = " + selectData);
 				int deleteNum = (int) selectData.get(0);
 				GoodsDTO dto = new GoodsDTO();

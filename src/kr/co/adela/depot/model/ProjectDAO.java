@@ -13,12 +13,12 @@ public class ProjectDAO {
 	
 	
 	public Vector Projectlist() {
-		// »óÇ°µéÀº ÇÏ³ªÇÏ³ª Å×ÀÌºí°ª¿¡ ³Ö¾îÁÖ´Â ÀÛ¾÷
+		// ìƒí’ˆë“¤ì€ í•˜ë‚˜í•˜ë‚˜ í…Œì´ë¸”ê°’ì— ë„£ì–´ì£¼ëŠ” ì‘ì—…
 		Vector vt = new Vector();
 		Connection conn = getConn();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "select * from goods WHERE fk_category_name = '°¡¹æ';";
+		String sql = "select * from goods WHERE fk_category_name = 'ê°€ë°©';";
 		try {
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -103,7 +103,7 @@ public class ProjectDAO {
 	
 	
 	
-	public ProjectDTO updateGoods() {   // ¼öÁ¤ ¹öÆ° ´­·¶À»¶§ ÀÚµ¿»ı¼ºÀ» À§ÇÑ ÀÛ¾÷
+	public ProjectDTO updateGoods() {   // ìˆ˜ì • ë²„íŠ¼ ëˆŒë €ì„ë•Œ ìë™ìƒì„±ì„ ìœ„í•œ ì‘ì—…
 		ProjectDTO dto = new ProjectDTO();
 		Connection conn = getConn();
 		PreparedStatement ps = null;
@@ -143,9 +143,9 @@ public class ProjectDAO {
 			result = ps.executeUpdate();
 			if(result == 1) {
 				ok = true;
-				System.out.println("»èÁ¦ ¿Ï·á!!");
+				System.out.println("ì‚­ì œ ì™„ë£Œ!!");
 			} else {
-				System.out.println("»èÁ¦ ½ÇÆĞ!!");
+				System.out.println("ì‚­ì œ ì‹¤íŒ¨!!");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -176,10 +176,10 @@ public class ProjectDAO {
 			
 			result = ps.executeUpdate();
 			if(result == 1) {
-				System.out.println("¼º°ø");
+				System.out.println("ì„±ê³µ");
 				ok = true;
 			} else {
-				System.out.println("½ÇÆĞ");
+				System.out.println("ì‹¤íŒ¨");
 				ok = false;
 			}
 			

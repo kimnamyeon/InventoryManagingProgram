@@ -43,7 +43,7 @@ public class ProjectBag extends JPanel implements ActionListener {
 	JTextField tfSearch;
 	JComboBox<String> cbSch;
 	public static JTable jtable;
-	DefaultTableModel tableModel; // »õ·Î°íÄ§ ¿ªÇÒ
+	DefaultTableModel tableModel; // ìƒˆë¡œê³ ì¹¨ ì—­í• 
 	Vector vt, selectDate;
 	private String imgInsert = "res/btnInsert.png";
 	private String imgInsertClick = "res/btnInsertClick.png";
@@ -52,7 +52,7 @@ public class ProjectBag extends JPanel implements ActionListener {
 	private String imgDelete = "res/btnDelete.png";
 	private String imgDeleteClick = "res/btnDeleteClick.png";
 
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public ProjectBag(DepotMainFrame f) {
 		this.f = f;
 		setBackground(Color.WHITE);
@@ -96,7 +96,7 @@ public class ProjectBag extends JPanel implements ActionListener {
 		btnDelete.setPressedIcon(deleteClick);
 		btnDelete.addActionListener(this);
 
-		// À©ÇÏ´Â ÁÂÇ¥¿¡ ¹öÆ°À» »ı¼º
+		// ìœˆí•˜ëŠ” ì¢Œí‘œì— ë²„íŠ¼ì„ ìƒì„±
 		pSouth.add(btnInsert);
 		pSouth.add(btnUpdate);
 		pSouth.add(btnDelete);
@@ -104,11 +104,11 @@ public class ProjectBag extends JPanel implements ActionListener {
 		pNorth = new JPanel();
 		pNorth.setBackground(Color.gray);
 
-		// pNorth.setLocation(50, 50); //À©µµ¿ì Ã¢ÀÌ »ı±â´Â ÁÂÇ¥
-		// pNorth.setPreferredSize(new Dimension(1175, 60)); // À©µµ¿ì½ÇÇà Ã¢ Å©±â
-		String[] strCbSch = { "¾Ç¼¼»ç¸®", "ÀÇ·ù", "½Å¹ß", "°¡¹æ" };
+		// pNorth.setLocation(50, 50); //ìœˆë„ìš° ì°½ì´ ìƒê¸°ëŠ” ì¢Œí‘œ
+		// pNorth.setPreferredSize(new Dimension(1175, 60)); // ìœˆë„ìš°ì‹¤í–‰ ì°½ í¬ê¸°
+		String[] strCbSch = { "ì•…ì„¸ì‚¬ë¦¬", "ì˜ë¥˜", "ì‹ ë°œ", "ê°€ë°©" };
 		cbSch = new JComboBox<>(strCbSch);
-		btnSearch = new JButton("°Ë»ö");
+		btnSearch = new JButton("ê²€ìƒ‰");
 		tfSearch = new JTextField(20);
 
 		pNorth.add(cbSch);
@@ -117,12 +117,12 @@ public class ProjectBag extends JPanel implements ActionListener {
 
 		pWest.setLayout(new GridLayout(7, 1));
 		lblMark = new JLabel("Mark");
-		btnAccessory = new JButton("¾Ç¼¼»ç¸®");
-		btnWear = new JButton("ÀÇ·ù");
-		btnShouse = new JButton("½Å¹ß");
-		btnBag = new JButton("°¡¹æ");
-		btnCheck = new JButton("ÀÌ·Â Á¶È¸");
-		btnManager = new JButton("°ü¸®ÀÚ ¸ñ·Ï");
+		btnAccessory = new JButton("ì•…ì„¸ì‚¬ë¦¬");
+		btnWear = new JButton("ì˜ë¥˜");
+		btnShouse = new JButton("ì‹ ë°œ");
+		btnBag = new JButton("ê°€ë°©");
+		btnCheck = new JButton("ì´ë ¥ ì¡°íšŒ");
+		btnManager = new JButton("ê´€ë¦¬ì ëª©ë¡");
 
 		pWest.add(lblMark);
 		pWest.add(btnAccessory);
@@ -134,14 +134,14 @@ public class ProjectBag extends JPanel implements ActionListener {
 		
 		ProjectDAO projectDAO = new ProjectDAO();
 		Vector cols = new Vector();
-		cols.add("°¡¹æ ¹øÈ£");
-		cols.add("°¡¹æÁ¾·ù(ÀÌ¸§)");
-		cols.add("°¡¹æ ¼¼ºÎ »çÇ×");
-		cols.add("°¡¹æ °¡°İ");
-		cols.add("°¡¹æ ¼ö·®");
-		cols.add("°¡¹æ À§Ä¡");
-		cols.add("ÀÔ°í ÀÏÀÚ");
-		cols.add("Ä«Å×°í¸®");
+		cols.add("ê°€ë°© ë²ˆí˜¸");
+		cols.add("ê°€ë°©ì¢…ë¥˜(ì´ë¦„)");
+		cols.add("ê°€ë°© ì„¸ë¶€ ì‚¬í•­");
+		cols.add("ê°€ë°© ê°€ê²©");
+		cols.add("ê°€ë°© ìˆ˜ëŸ‰");
+		cols.add("ê°€ë°© ìœ„ì¹˜");
+		cols.add("ì…ê³  ì¼ì");
+		cols.add("ì¹´í…Œê³ ë¦¬");
 		vt = projectDAO.Projectlist();
 		System.out.println(vt);
 		jtable = new JTable(vt, cols);
@@ -158,20 +158,20 @@ public class ProjectBag extends JPanel implements ActionListener {
 		pCenter.setBackground(Color.decode("#BDBDBD"));
 		add(pCenter, BorderLayout.CENTER);
 		add(pSouth, BorderLayout.SOUTH);
-		// DB »óÇ°Á¤º¸¸¦ È­¸é¿¡ Ãâ·Â ProjectBag ¿¡ ³Ö¾îÁÖ¾î ProjectMain ¿¡¼­ projectBag È­¸éÀ» Ãâ·Â.
+		// DB ìƒí’ˆì •ë³´ë¥¼ í™”ë©´ì— ì¶œë ¥ ProjectBag ì— ë„£ì–´ì£¼ì–´ ProjectMain ì—ì„œ projectBag í™”ë©´ì„ ì¶œë ¥.
 	}
 	
 	public void showBag() {
 		ProjectDAO projectDAO = new ProjectDAO();
 		Vector cols = new Vector();
-		cols.add("°¡¹æ ¹øÈ£");
-		cols.add("°¡¹æÁ¾·ù(ÀÌ¸§)");
-		cols.add("°¡¹æ ¼¼ºÎ »çÇ×");
-		cols.add("°¡¹æ °¡°İ");
-		cols.add("°¡¹æ ¼ö·®");
-		cols.add("°¡¹æ À§Ä¡");
-		cols.add("ÀÔ°í ÀÏÀÚ");
-		cols.add("Ä«Å×°í¸®");
+		cols.add("ê°€ë°© ë²ˆí˜¸");
+		cols.add("ê°€ë°©ì¢…ë¥˜(ì´ë¦„)");
+		cols.add("ê°€ë°© ì„¸ë¶€ ì‚¬í•­");
+		cols.add("ê°€ë°© ê°€ê²©");
+		cols.add("ê°€ë°© ìˆ˜ëŸ‰");
+		cols.add("ê°€ë°© ìœ„ì¹˜");
+		cols.add("ì…ê³  ì¼ì");
+		cols.add("ì¹´í…Œê³ ë¦¬");
 		vt = projectDAO.Projectlist();
 
 		tableModel = new DefaultTableModel(vt, cols);
@@ -189,13 +189,13 @@ public class ProjectBag extends JPanel implements ActionListener {
 			f.invalidate();
 			f.validate();
 			f.repaint();
-			// System.out.println("Ãß°¡");
+			// System.out.println("ì¶”ê°€");
 
 		} else if (e.getSource() == btnUpdate) {
 			int row = jtable.getSelectedRow();
 			
 			if (row < 0) {
-				JOptionPane.showMessageDialog(this, "»óÇ°À» ¼±ÅÃÇØÁÖ¼¼¿ä.!!");
+				JOptionPane.showMessageDialog(this, "ìƒí’ˆì„ ì„ íƒí•´ì£¼ì„¸ìš”.!!");
 				return;
 			}
 
@@ -224,10 +224,10 @@ public class ProjectBag extends JPanel implements ActionListener {
 			f.invalidate();
 			f.validate();
 			f.repaint();
-			// System.out.println("¼öÁ¤");
+			// System.out.println("ìˆ˜ì •");
 
 		} else if (e.getSource() == btnDelete) {
-			int result = JOptionPane.showConfirmDialog(this, "»èÁ¦ ÇÏ½Ã°Ú½À´Ï±î?", "»èÁ¦", JOptionPane.YES_NO_OPTION);
+			int result = JOptionPane.showConfirmDialog(this, "ì‚­ì œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ì‚­ì œ", JOptionPane.YES_NO_OPTION);
 			if (result == 0) {
 				String strNumber = (String) jtable.getValueAt(jtable.getSelectedRow(), 0);
 				int number = Integer.parseInt(strNumber);
@@ -236,12 +236,12 @@ public class ProjectBag extends JPanel implements ActionListener {
 				boolean ok = dao.deleteGoods(number);
 
 				if (!ok) {
-					System.out.println("»óÇ° »èÁ¦ ¿À·ù!");
+					System.out.println("ìƒí’ˆ ì‚­ì œ ì˜¤ë¥˜!");
 
 				} else {
 					DepotHistoryDTO historyDTO = new DepotHistoryDTO();
 					historyDTO.setGoodsName((String) jtable.getValueAt(result, 1));
-					historyDTO.setHistoryDetail("»èÁ¦");
+					historyDTO.setHistoryDetail("ì‚­ì œ");
 					String strAmount = (String)jtable.getValueAt(result, 4);
 					historyDTO.setGoodsAmount(Integer.parseInt(strAmount));
 					historyDTO.setManagerId(DepotMainFrame.managerId);

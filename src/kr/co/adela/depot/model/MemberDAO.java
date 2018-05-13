@@ -36,7 +36,7 @@ public class MemberDAO {
 			e.printStackTrace();
 		}
 		if( result == 1 ) {
-			System.out.println("È¸¿ø °¡ÀÔ ¼º°ø");
+			System.out.println("íšŒì› ê°€ì… ì„±ê³µ");
 			ok = true;
 		} else {
 			ok = false;
@@ -65,7 +65,7 @@ public class MemberDAO {
 		} finally {
 			release(conn, ps, rs);
 		}//finally
-		System.out.println("¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£°¡ ¸Â´Â°¡? = " + ok);
+		System.out.println("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ê°€ ë§ëŠ”ê°€? = " + ok);
 		return ok;
 	}//loginCheck
 	
@@ -124,7 +124,7 @@ public class MemberDAO {
 	private Connection getConn() {
 		Connection conn = null;
 		String dbUrl =
-				//¸¶¸®¾Æ DB »ç¿ëÀÚ ¸í : TEST
+				//ë§ˆë¦¬ì•„ DB ì‚¬ìš©ì ëª… : TEST
 			"jdbc:mysql://localhost:3306/test?characterEncoding=utf-8";
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");

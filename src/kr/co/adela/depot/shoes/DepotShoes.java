@@ -51,27 +51,27 @@ public class DepotShoes extends JPanel implements ActionListener {
 		this.fMain = fMain;
 		setLayout(new BorderLayout());
 		
-		lblTitle = new JLabel("½Å¹ß");
-		lblTitle.setFont(new Font("±¼¸²", Font.BOLD, 25));
+		lblTitle = new JLabel("ì‹ ë°œ");
+		lblTitle.setFont(new Font("êµ´ë¦¼", Font.BOLD, 25));
 		pNorth = new JPanel();
 		pNorth.setBackground(Color.decode("#BDBDBD"));
 		pNorth.add(lblTitle);
 		add(pNorth, BorderLayout.NORTH);
 
-		// »óÇ° DB¿¡¼­ °ª °¡Á®¿À±â
+		// ìƒí’ˆ DBì—ì„œ ê°’ ê°€ì ¸ì˜¤ê¸°
 		DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 		Vector<String> cols = new Vector<>();
-		cols.add("»óÇ°¹øÈ£");
-		cols.add("»óÇ°¸í");
-		cols.add("»óÇ°¼³¸í");
-		cols.add("°¡°İ");
-		cols.add("¼ö·®");
-		cols.add("»óÇ°À§Ä¡");
-		cols.add("ÀÔ°íÀÏ");
-		cols.add("Ä«Å×°í¸®");
+		cols.add("ìƒí’ˆë²ˆí˜¸");
+		cols.add("ìƒí’ˆëª…");
+		cols.add("ìƒí’ˆì„¤ëª…");
+		cols.add("ê°€ê²©");
+		cols.add("ìˆ˜ëŸ‰");
+		cols.add("ìƒí’ˆìœ„ì¹˜");
+		cols.add("ì…ê³ ì¼");
+		cols.add("ì¹´í…Œê³ ë¦¬");
 		datas = goodsDAO.printGoods();
 
-		// Å×ÀÌºí Ãß°¡ (pCenter)
+		// í…Œì´ë¸” ì¶”ê°€ (pCenter)
 		tableRenderCenter = new DefaultTableCellRenderer();
 		tableRenderRight = new DefaultTableCellRenderer();
 		tableRenderCenter.setHorizontalAlignment(SwingConstants.CENTER);
@@ -99,7 +99,7 @@ public class DepotShoes extends JPanel implements ActionListener {
 		ImageIcon updateClick = new ImageIcon(imgUpdateClick);
 		ImageIcon delete = new ImageIcon(imgDelete);
 		ImageIcon deleteClick = new ImageIcon(imgDeleteClick);
-		// ¹öÆ° Ãß°¡ (pSouth)
+		// ë²„íŠ¼ ì¶”ê°€ (pSouth)
 		btnInsert = new JButton(insert);
 		btnInsert.setBorderPainted(false);
 		btnInsert.setFocusPainted(false);
@@ -132,14 +132,14 @@ public class DepotShoes extends JPanel implements ActionListener {
 	public void refreshTable() {
 		DepotGoodsDAO goodsDAO = new DepotGoodsDAO();
 		Vector<String> cols = new Vector<>();
-		cols.add("»óÇ°¹øÈ£");
-		cols.add("»óÇ°¸í");
-		cols.add("»óÇ°¼³¸í");
-		cols.add("°¡°İ");
-		cols.add("¼ö·®");
-		cols.add("»óÇ°À§Ä¡");
-		cols.add("ÀÔ°íÀÏ");
-		cols.add("Ä«Å×°í¸®");
+		cols.add("ìƒí’ˆë²ˆí˜¸");
+		cols.add("ìƒí’ˆëª…");
+		cols.add("ìƒí’ˆì„¤ëª…");
+		cols.add("ê°€ê²©");
+		cols.add("ìˆ˜ëŸ‰");
+		cols.add("ìƒí’ˆìœ„ì¹˜");
+		cols.add("ì…ê³ ì¼");
+		cols.add("ì¹´í…Œê³ ë¦¬");
 		datas = goodsDAO.printGoods();
 
 		tableModel = new DefaultTableModel(datas, cols);
@@ -181,7 +181,7 @@ public class DepotShoes extends JPanel implements ActionListener {
 			int row = jtable.getSelectedRow();
 
 			if (row < 0) {
-				JOptionPane.showMessageDialog(this, "¼±ÅÃµÈ »óÇ°ÀÌ ¾ø½À´Ï´Ù.");
+				JOptionPane.showMessageDialog(this, "ì„ íƒëœ ìƒí’ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 				return;
 			}
 
@@ -206,11 +206,11 @@ public class DepotShoes extends JPanel implements ActionListener {
 			int row = jtable.getSelectedRow();
 
 			if (row < 0) {
-				JOptionPane.showMessageDialog(this, "¼±ÅÃµÈ »óÇ°ÀÌ ¾ø½À´Ï´Ù.");
+				JOptionPane.showMessageDialog(this, "ì„ íƒëœ ìƒí’ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 				return;
 			}
 
-			int isDelete = JOptionPane.showConfirmDialog(this, "ÇØ´ç »óÇ°À» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?", "»óÇ° »èÁ¦", JOptionPane.YES_NO_OPTION);
+			int isDelete = JOptionPane.showConfirmDialog(this, "í•´ë‹¹ ìƒí’ˆì„ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?", "ìƒí’ˆ ì‚­ì œ", JOptionPane.YES_NO_OPTION);
 
 			if (isDelete == 0) {
 				DepotGoodsDTO dto = new DepotGoodsDTO();
@@ -221,11 +221,11 @@ public class DepotShoes extends JPanel implements ActionListener {
 				boolean ok = goodsDAO.deleteGoods(dto);
 
 				if (!ok) {
-					System.out.println("»óÇ° »èÁ¦ ¿À·ù!");
+					System.out.println("ìƒí’ˆ ì‚­ì œ ì˜¤ë¥˜!");
 				} else {
 					DepotHistoryDTO historyDTO = new DepotHistoryDTO();
 					historyDTO.setGoodsName((String) jtable.getValueAt(row, 1));
-					historyDTO.setHistoryDetail("»èÁ¦");
+					historyDTO.setHistoryDetail("ì‚­ì œ");
 					historyDTO.setGoodsAmount((Integer) jtable.getValueAt(row, 4));
 					historyDTO.setManagerId(DepotMainFrame.managerId);
 					historyDTO.setManagerName(DepotMainFrame.managerName);

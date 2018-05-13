@@ -43,14 +43,14 @@ public class UpdataDialog extends JDialog implements ActionListener {
 		
 		setSize(600,350);
 		getContentPane().setLayout(new BorderLayout());
-		//label ³×ÀÌ¹Ö
-		lblName = new JLabel("»ó Ç° ¸í");
-		lblDetail = new JLabel("»óÇ° ¼³¸í");
+		//label ë„¤ì´ë°
+		lblName = new JLabel("ìƒ í’ˆ ëª…");
+		lblDetail = new JLabel("ìƒí’ˆ ì„¤ëª…");
 		lblDetail.setBounds(95, 8, 52, 15);
-		lblPrice = new JLabel("°¡ °İ");
-		lblAmount = new JLabel("¼ö ·®");
-		lblLocation = new JLabel("ÀúÀå À§Ä¡ ");
-		lblCategory = new JLabel("Ä«Å× °í¸® ");
+		lblPrice = new JLabel("ê°€ ê²©");
+		lblAmount = new JLabel("ìˆ˜ ëŸ‰");
+		lblLocation = new JLabel("ì €ì¥ ìœ„ì¹˜ ");
+		lblCategory = new JLabel("ì¹´í…Œ ê³ ë¦¬ ");
 		//textfield 
 		tfName = new JTextField(30);
 		tfDetail = new JTextField(30);
@@ -76,68 +76,68 @@ public class UpdataDialog extends JDialog implements ActionListener {
 			}
 		});
 		tfLocation = new JTextField(10);
-		String[] strCategory = {"ÀÇ·ù", "°¡¹æ", "½Å¹ß","¾Ç¼¼»ç¸®"};
+		String[] strCategory = {"ì˜ë¥˜", "ê°€ë°©", "ì‹ ë°œ","ì•…ì„¸ì‚¬ë¦¬"};
 		cbCategory = new JComboBox<>(strCategory);
-		//dialog ¼¾ÅÍ
+		//dialog ì„¼í„°
 		pCenter = new JPanel();
 		pCenter.setBackground(Color.decode("#BDBDBD"));
 		getContentPane().add(pCenter,BorderLayout.CENTER);
 		pCenter.setLayout(null);
-		//dialog ³²ÂÊ
+		//dialog ë‚¨ìª½
 		pSouth = new JPanel();
 		pSouth.setBackground(Color.decode("#BDBDBD"));
 		getContentPane().add(pSouth,BorderLayout.SOUTH);
-		//dialog ¼¾ÅÍ¿¡ Å¸ÀÌÆ² ¶óº§ ºÙ¿©¹ö¸²
+		//dialog ì„¼í„°ì— íƒ€ì´í‹€ ë¼ë²¨ ë¶™ì—¬ë²„ë¦¼
 		pTitle = new JPanel();
 		pTitle.setBounds(12, 2, 560, 41);
 		pTitle.setBackground(Color.decode("#BDBDBD"));
 		pCenter.add(pTitle);
-		lblTitle = new JLabel("¼öÁ¤ Dialog");
-		lblTitle.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		lblTitle = new JLabel("ìˆ˜ì • Dialog");
+		lblTitle.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 20));
 		pTitle.add(lblTitle);
 		
 		
-		//dialog ¼¾ÅÍ¿¡ »óÇ°¸í ÆĞ³Î ºÙÀÓ
+		//dialog ì„¼í„°ì— ìƒí’ˆëª… íŒ¨ë„ ë¶™ì„
 		pName = new JPanel(new FlowLayout());
 		pName.setBounds(12, 41, 560, 41);
 		pCenter.add(pName);
 		pName.setBackground(Color.decode("#BDBDBD"));
 		pName.add(lblName); pName.add(tfName);
-		//dialog ¼¾ÅÍ¿¡ »óÇ°¼³¸í ÆĞ³Î ºÙÀÓ
+		//dialog ì„¼í„°ì— ìƒí’ˆì„¤ëª… íŒ¨ë„ ë¶™ì„
 		pDetail = new JPanel(new FlowLayout());
 		pDetail.setBounds(12, 80, 560, 41);
 		pCenter.add(pDetail);
 		pDetail.setBackground(Color.decode("#BDBDBD"));
 		pDetail.add(lblDetail); pDetail.add(tfDetail);
-		//dialog ¼¾ÅÍ¿¡ °¡°İ ¹× ¼ö·® ÆĞ³Î ºÙÀÓ
+		//dialog ì„¼í„°ì— ê°€ê²© ë° ìˆ˜ëŸ‰ íŒ¨ë„ ë¶™ì„
 		pPriceAmount = new JPanel(new FlowLayout());
 		pPriceAmount.setBounds(12, 119, 560, 41);
 		pCenter.add(pPriceAmount);
 		pPriceAmount.setBackground(Color.decode("#BDBDBD"));
 		pPriceAmount.add(lblPrice); pPriceAmount.add(tfPrice);
 		pPriceAmount.add(lblAmount); pPriceAmount.add(tfAmount);
-		//dialog ¼¾ÅÍ¿¡ ÀúÀåÀ§Ä¡ ÆĞ³Î ºÙÀÓ
+		//dialog ì„¼í„°ì— ì €ì¥ìœ„ì¹˜ íŒ¨ë„ ë¶™ì„
 		pLocation = new JPanel(new FlowLayout());
 		pLocation.setBounds(12, 159, 560, 41);
 		pCenter.add(pLocation);
 		pLocation.setBackground(Color.decode("#BDBDBD"));
 		pLocation.add(lblLocation); pLocation.add(tfLocation);
-		//dialog ¼¾ÅÍ¿¡ Ä«Å×°í¸® ÆĞ³Î ºÙÀÓ
+		//dialog ì„¼í„°ì— ì¹´í…Œê³ ë¦¬ íŒ¨ë„ ë¶™ì„
 		pCategory = new JPanel(new FlowLayout());
 		pCategory.setBounds(12, 198, 560, 41);
 		pCenter.add(pCategory);
 		pCategory.setBackground(Color.decode("#BDBDBD"));
 		pCategory.add(lblCategory); pCategory.add(cbCategory);
-		//button ÀåÂø
-		btnOk = new JButton("È®ÀÎ");
-		btnCancel = new JButton("Ãë¼Ò");
+		//button ì¥ì°©
+		btnOk = new JButton("í™•ì¸");
+		btnCancel = new JButton("ì·¨ì†Œ");
 		pSouth.add(btnOk); pSouth.add(btnCancel);
 		btnOk.addActionListener(this);
 		btnCancel.addActionListener(this);
 		// dto-> textfield set
 		tfName.setText(dtoc.getName());
 		tfDetail.setText(dtoc.getDetail());
-		//jtableÀÇ intÇüÀ» stringÀ¸·Î º¯È¯, ¿Öwhy? textField´Â ¼ıÀÚ ¾Èµé¾î°¨  
+		//jtableì˜ intí˜•ì„ stringìœ¼ë¡œ ë³€í™˜, ì™œwhy? textFieldëŠ” ìˆ«ì ì•ˆë“¤ì–´ê°  
 		Object intPrice = dtoc.getPrice();
 		String strPrice = intPrice.toString();
 		tfPrice.setText(strPrice);
@@ -145,11 +145,11 @@ public class UpdataDialog extends JDialog implements ActionListener {
 		String strAmount = intAmount.toString();
 		tfAmount.setText(strAmount);
 		tfLocation.setText(dtoc.getLocation());
-		//Ä«Å×°í¸® ÄŞº¸¹Ú½º ºñ±³
+		//ì¹´í…Œê³ ë¦¬ ì½¤ë³´ë°•ìŠ¤ ë¹„êµ
 		//	cbPhone.setSelectedItem(tel1);
 		String sCategory = dtoc.getCategory();
 		cbCategory.setSelectedItem(sCategory);
-		//upNumber´Â º¯¼ö¿¡¸¸ ÀúÀå, ÀÌ°Å ÀÌ¿ëÇØ¼­ update Äõ¸® ÀÛ¼ºÇÒ °Í
+		//upNumberëŠ” ë³€ìˆ˜ì—ë§Œ ì €ì¥, ì´ê±° ì´ìš©í•´ì„œ update ì¿¼ë¦¬ ì‘ì„±í•  ê²ƒ
 		upNumber = dtoc.getNumber();
 		
 		this.addWindowListener(new WindowAdapter() {
@@ -187,9 +187,9 @@ public class UpdataDialog extends JDialog implements ActionListener {
 			if(ok) {
 				cM.updateTable();
 				this.setVisible(false);
-				System.out.println("¼öÁ¤¼º°ø?");
+				System.out.println("ìˆ˜ì •ì„±ê³µ?");
 			} 
-			String history = "»óÇ° ¼öÁ¤";
+			String history = "ìƒí’ˆ ìˆ˜ì •";
 			dtoc.setHistoryDetail(history);
 			System.out.println("@@@@datadialog history" + history);
 			daoc.insertHistory(dtoc);
@@ -200,23 +200,23 @@ public class UpdataDialog extends JDialog implements ActionListener {
 	}//actionPerformed
 	public void checkValue() {
 		if(tfName.getText().length() == 0) {
-			JOptionPane.showMessageDialog(this, "»óÇ°¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä^^");
+			JOptionPane.showMessageDialog(this, "ìƒí’ˆëª…ì„ ì…ë ¥í•˜ì„¸ìš”^^");
 				tfName.requestFocus();
 			}
 		if(tfDetail.getText().length() == 0) {
-			JOptionPane.showMessageDialog(this, "»óÇ° ¼³¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä^^");
+			JOptionPane.showMessageDialog(this, "ìƒí’ˆ ì„¤ëª…ì„ ì…ë ¥í•˜ì„¸ìš”^^");
 			tfDetail.requestFocus();
 		}
 		if(tfPrice.getText().equals("")) {
-			JOptionPane.showMessageDialog(this, "°¡°İÀ» ÀÔ·ÂÇÏ¼¼¿ä^^");
+			JOptionPane.showMessageDialog(this, "ê°€ê²©ì„ ì…ë ¥í•˜ì„¸ìš”^^");
 			tfPrice.requestFocus();
 		}
 		if(tfAmount.getText().equals("")) {
-			JOptionPane.showMessageDialog(this, "¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä^^");
+			JOptionPane.showMessageDialog(this, "ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”^^");
 			tfAmount.requestFocus();
 		}
 		if(tfLocation.getText().length() == 0) {
-			JOptionPane.showMessageDialog(this, "»óÇ° À§Ä¡¸¦ ÀÔ·ÂÇÏ¼¼¿ä^^");
+			JOptionPane.showMessageDialog(this, "ìƒí’ˆ ìœ„ì¹˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”^^");
 			tfLocation.requestFocus();
 		}
 	}//checkValue

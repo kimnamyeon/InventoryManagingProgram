@@ -15,7 +15,7 @@ public class ProjectDTO {
 		private String manager_rank;
 		private Date manager_Joindate;
 		
-		// getter, setter °ü¸®ÀÚ
+		// getter, setter ê´€ë¦¬ì
 		public String getManager_id() {
 		return manager_id;
 	}
@@ -95,7 +95,7 @@ public class ProjectDTO {
 	public void setManager_Joindate(Date manager_Joindate) {
 		this.manager_Joindate = manager_Joindate;
 	}
-	// »óÇ° -----
+	// ìƒí’ˆ -----
 	private String goods_number;
 	private String goods_name;
 	private String goods_detail;
